@@ -7,11 +7,5 @@
   ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/mirror_desktop/hillsideurbancity.bunyangnara.kr/$1" }
-  ],
-  "builds": [
-    { "src": "mirror_desktop/hillsideurbancity.bunyangnara.kr/**", "use": "@vercel/static" }
-  ],
-  "routes": [
-    { "src": "/(.*)", "dest": "mirror_desktop/hillsideurbancity.bunyangnara.kr/$1" }
   ]
 }
