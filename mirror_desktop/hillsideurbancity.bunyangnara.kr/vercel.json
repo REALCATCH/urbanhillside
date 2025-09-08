@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/sub.html%3Fm=(.*)", "destination": "/$1" },
+    { "source": "/sub.html", "has": [{ "type": "query", "key": "m", "value": "(.*)" }], "destination": "/$1" }
+  ]
+}
