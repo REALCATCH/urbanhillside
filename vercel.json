@@ -1,8 +1,17 @@
 {
+  "version": 2,
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    { "source": "/", "destination": "/mirror_desktop/hillsideurbancity.bunyangnara.kr/index.html" }
+  ],
   "rewrites": [
-    { "source": "/", "destination": "/mirror_desktop/hillsideurbancity.bunyangnara.kr/index.html" },
     { "source": "/(.*)", "destination": "/mirror_desktop/hillsideurbancity.bunyangnara.kr/$1" }
+  ],
+  "builds": [
+    { "src": "mirror_desktop/hillsideurbancity.bunyangnara.kr/**", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "mirror_desktop/hillsideurbancity.bunyangnara.kr/$1" }
   ]
 }
