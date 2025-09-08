@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+/****************************************************
+
+	1. asset 이동완료 2025-07-25
+	2. 개별사이트 스타일 작업시 아래에 추가하여 사용하세요!
+
+****************************************************/
+/* add */
+
+
+
+
+
+
+
+
+
+.main-life .life-slide .bg img{aspect-ratio:unset;}
+
+
+/* media */
+@media screen and (max-width: 1880px) {
+	@media screen and (max-width: 1640px){
+	}
+	@media screen and (max-width: 1560px){
+	}
+	@media screen and (max-width: 1500px){
+	}
+	@media screen and (max-width: 1470px){		
+	}
+	@media screen and (max-width:1280px){
+	}
+	@media screen and (max-width: 1024px){
+	}
+	@media screen and (max-width: 800px){ /* breakpoint 모바일 */
+	}
+	@media screen and (max-width: 640px){		
+	}
+	@media screen and (max-width: 480px){
+	}
+	@media screen and (max-width: 360px){	
+	}
+}

@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+/****************************************************
+
+	root 개별적용 항목 /변경금지/
+
+****************************************************/
+:root{
+	/* 개별적용 css */
+	--theme-color: #c17426;
+	--dark-color: #0a223e;
+	--main-color: #0a223e;
+	--second-color: #c17426;	
+	--accent-color: #c17426;
+	--footer-color: #414141;
+	--footer-font: #bbbbbb;
+}
+
+/***********************************************************
+
+	이동하면 안되는것들 - 개별적용 항목 /변경금지/
+
+***********************************************************/
+/* 메인 비주얼 슬라이드 넘버 */
+.main-visual .pag.act1 .bar:after {width: calc(100% / 02 * 1) !important;}
+.main-visual .pag.act2 .bar:after {width: calc(100% / 02 * 2) !important;}
+.main-visual .pag.act3 .bar:after {width: calc(100% / 02 * 3) !important;}
+.main-visual .pag.act4 .bar:after {width: calc(100% / 02 * 4) !important;}
+.main-visual .pag.act5 .bar:after {width: calc(100% / 02 * 5) !important;}
+/* 건드리지말것들 yun */
+#header .logo a.logo-img {background: url(/admin/upimg/2025/08/20/1755674335_1.로고.png) no-repeat left center / contain;}
+#gnb.depth1-list >li .depth1 {color: #333333;}
+#gnb.depth1-list >li:hover .depth1 {color: #0a223e;}
+#gnb.depth1-list .depth2 li a {color: #333333;}
+#gnb.depth1-list .depth2 li a:hover {color: #0a223e;}
+#gnb.depth1-list >li .depth1:after {background: #0a223e;}
+.main-loc.simple .desc .text b:after {content:""; display:block; background: url(../../admin/upimg/0000/00/00/index.html)no-repeat center center /contain; width: var(--logo-width); height: var(--logo-height);}
+
+
+/****************************************************
+
+	1. asset 이동완료 2025-07-25
+	2. 개별사이트 스타일 작업시 아래에 추가하여 사용하세요!
+
+****************************************************/
+/* add */
+
+
+
+
+
+
+
+
+
+
+
+
+/* media */
+@media screen and (max-width: 1880px) {
+	@media screen and (max-width: 1640px){
+	}
+	@media screen and (max-width: 1560px){
+	}
+	@media screen and (max-width: 1500px){
+	}
+	@media screen and (max-width: 1470px){		
+	}
+	@media screen and (max-width:1280px){
+	}
+	@media screen and (max-width: 1024px){
+	}
+	@media screen and (max-width: 800px){ /* breakpoint 모바일 */
+	}
+	@media screen and (max-width: 640px){		
+	}
+	@media screen and (max-width: 480px){
+	}
+	@media screen and (max-width: 360px){	
+	}
+}

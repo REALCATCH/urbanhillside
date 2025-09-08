@@ -1,0 +1,1442 @@
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="robots" content="noindex, nofollow" />
+	<meta property="og:image" content="/home_page/bunyangnara/images/common/snst.jpg">	<link rel="shortcut icon" href="https://hillsideurbancity.bunyangnara.kr/admin/images/favicon.ico" />  <title>분양나라</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="https://hillsideurbancity.bunyangnara.kr/admin/vendors/feather/feather.css">
+  <link rel="stylesheet" href="https://hillsideurbancity.bunyangnara.kr/admin/vendors/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="https://hillsideurbancity.bunyangnara.kr/admin/vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="https://hillsideurbancity.bunyangnara.kr/admin/vendors/typicons/typicons.css">
+  <link rel="stylesheet" href="https://hillsideurbancity.bunyangnara.kr/admin/vendors/simple-line-icons/css/simple-line-icons.css">
+  <link rel="stylesheet" href="https://hillsideurbancity.bunyangnara.kr/admin/vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <!--<link rel="stylesheet" href="vendors/datatables.net-bs4/dataTables.bootstrap4.css">-->
+  <!--<link rel="stylesheet" href="/admin/js/select.dataTables.min.css">-->
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="https://hillsideurbancity.bunyangnara.kr/admin/css/vertical-layout-light/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="https://hillsideurbancity.bunyangnara.kr/admin/images/favicon.ico" />
+	<link rel="stylesheet" href="https://hillsideurbancity.bunyangnara.kr/admin/css/toastr.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://hillsideurbancity.bunyangnara.kr/admin/star-admin2/vendors/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://hillsideurbancity.bunyangnara.kr/admin/css/jquery-confirm.min.css"/>
+	<link rel="stylesheet" href="https://hillsideurbancity.bunyangnara.kr/admin/css/style.css">
+</head>
+<body>
+  <div class="container-scroller">
+    <div class="container-fluid page-body-wrapper full-page-wrapper">
+			<link rel="stylesheet" href="https://hillsideurbancity.bunyangnara.kr/admin/css/login.css">
+			<div id="container_box" class="container_box2">
+					<!--로그인 시작-->		
+					<div class="main_box login_main_box main_box_active">
+						<form action="https://hillsideurbancity.bunyangnara.kr/admin/login_reg.php" name="login_form" method="post" id="login_form">
+							<input type="hidden" name="work" value="login">
+							<input type="hidden" id="work2" value="">
+							<div class="header_box">
+								<span>
+									LOGIN
+								</span>
+							</div>
+							<div class="body_box">
+								<div class="form-group" ng-class="{'not-empty': userName.length}">
+									<input type="text" class="form-control" name="id" id="id" ng-model="아이디"/>
+									<label for="id" class="animated-label">아이디</label>
+								</div>
+								<div class="form-group" ng-class="{'not-empty': userName.length}">
+									<input type="password" class="form-control" name="pw"  id="pw" ng-model="비밀번호"/>
+									<label for="pw" class="animated-label">비밀번호</label>
+								</div>
+							</div>
+							<div class="footer_box">
+								<div id="id_save_box">
+                  <div class="form-check">
+                    <label class="form-check-label text-muted">
+                      <input type="checkbox" class="form-check-input" id="id_save">
+                      아이디저장
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label text-muted">
+                      <input type="checkbox" class="form-check-input" id="auto_login">
+                      자동로그인
+                    </label>
+                  </div>
+								</div>
+								<input type="button" value="로그인" id="login_btn" onClick="login();">
+								<div>
+									<span>
+										<font id="find_password"  onClick="location.href='./login?workName=pass'">비밀번호 찾기</font> | <font id="sign_up_btn" onClick="location.href='./login?workName=join'">회원 가입</font>
+									</span>
+								</div>
+							</div>
+						</form>		
+					</div>
+					<!--로그인 종료-->		
+					<!--회원 가입 시작-->
+					<div class="main_box join_main_box ">
+						<form action="https://hillsideurbancity.bunyangnara.kr/admin/login_reg.php" name="sign_up_form" method="post" id="join_form">
+							<input type="hidden" name="work" value="sign_up">
+							<input type="hidden" id="work2" value="">
+							<div class="header_box">
+								<span>
+									SIGN UP
+								</span>
+							</div>
+							<div class="body_box">
+								<div class="form-group">
+									<input type="text" class="form-control" name="id_val"  id="id_val"/>
+									<label for="id_val" class="animated-label">*아이디</label>
+									<input type="button" value="중복확인" id="id_chk_btn">
+									<input type="hidden" id="id_chk" value="">
+								</div>
+								<div class="form-group">
+									<input type="password" class="form-control" name="pw_val"  id="pw_val"/>
+									<label for="pw_val" class="animated-label">*비밀번호</label>
+								</div>
+								<div class="form-group">
+									<input type="password" class="form-control" name="pw2_val"  id="pw2_val"/>
+									<label for="pw2_val" class="animated-label">*비밀번호 확인</label>
+								</div>
+								<div class="form-group">
+									<input type="text" class="form-control" name="name"  id="name"/>
+									<label for="name" class="animated-label">*이름</label>
+								</div>
+								<div class="flex">
+									<div class="form-group">
+										<input type="text" class="form-control" name="phone"  id="phone" maxlength="3" oninput="only_number(this)"/>
+										<label for="phone" class="animated-label">*휴대폰 번호</label>
+									</div>
+									<div class="form-group">
+										<input type="text" class="form-control" name="phone2"  id="phone2" maxlength="4" oninput="only_number(this)"/>
+										<label for="phone2" class="animated-label">*휴대폰 앞자리</label>
+									</div>
+									<div class="form-group">
+										<input type="text" class="form-control" name="phone3"  id="phone3" maxlength="4" oninput="only_number(this)"/>
+										<label for="phone3" class="animated-label">*휴대폰 뒷자리</label>
+									</div>
+								</div>
+								<div class="form-group">
+									<label><input type="checkbox" class="i-checks" id="agree_chk1" checked> 개인정보 처리방침에 동의합니다 </label>
+									<span style="color:#4D4D4D; cursor: pointer;" id="privacy_policy_btn" onClick="location.href='./login?workName=privacy'">[내용보기]</span>
+								</div>
+								<div class="form-group"  style="padding-top: 0px;">
+										<label><input type="checkbox" class="i-checks" id="agree_chk2" checked> 이용약관에 동의합니다 </label>
+									<span style="color:#4D4D4D; cursor: pointer;" id="agreement_of_the_policy_btn" onClick="location.href='./login?workName=agreement'">[내용보기]</span>
+								</div>
+							</div>
+							<div class="footer_box">
+								<input type="button" value="회원가입" id="join_btn">
+								<div>
+									<span>
+										<font onClick="location.href='./login'">로그인 페이지로 이동</font>
+									</span>
+								</div>
+							</div>
+						</form>		
+					</div>
+					<!--회원 가입 종료-->
+					<!--개인정보 처리 방침 시작-->
+					<div class="main_box privacy_main_box ">
+						<form action="https://hillsideurbancity.bunyangnara.kr/admin/login_reg.php" name="login_form" method="post">
+							<div class="header_box">
+								<span>
+									개인정보 처리 방침
+								</span>
+							</div>
+							<div class="body_box">
+								<div class="text_box">
+									<style>
+.small_txt1 {font-size: 15px;padding-top: 20px;}
+.small_txt2 {font-size: 15px;padding-top: 20px;font-weight: bold;}
+.small_txt3 {font-size: 15px;padding-top: 10px;padding-left: 10px;}
+.small_txt4 {font-size: 14px;padding-top: 10px;padding-left: 10px;line-height: 1.4;}
+.text_indent {text-indent: 1em;margin-top: -1.5em;}
+.text_indent2 {text-indent: 1em;margin-top: 1em;}
+.text_indent3 {text-indent: 1em;}
+.text_indent4 {text-indent: 1em;margin-top: 0.7em;}
+.text_indent5 {text-indent: 2em;}
+.text_indent6 {text-indent: 2em;margin-top: 0.7em;}
+
+</style>
+<div class="notice_list">
+
+	<div class="small_txt1">(주) 케이웹미디어(이하 "회사"라 함)는 이용자들의 개인정보보호를 매우 중요시하며, 이용자가 회사의 서비스를 이용함과 동시에 온라인상에서 회사에 제공한 개인정보가 보호 받을 수 있도록 최선을 다하고 있습니다. 이에 회사는 통신비밀보호법, 전기통신사업법, 정보통신망 이용촉진 및 정보보호 등에 관한 법률 등 정보통신 서비스 제공자가 준수하여야 할 관련 법규상의 개인정보보호 규정 및 정보통신부가 제정한 개인정보보호지침을 준수하고 있습니다. 회사는 개인정보취급방침을 통하여 이용자들이 제공하는 개인정보가 어떠한 용도와 방식으로 이용되고 있으며 개인정보보호를 위해 어떠한 조치가 취해지고 있는지 알려드립니다.
+	<br><br>
+	회사는 개인정보취급방침을 홈페이지 첫 화면에 공개함으로써 이용자들이 언제나 용이하게 보실 수 있도록 조치하고 있습니다.
+	<br><br>
+	회사의 개인정보취급방침은 정부의 법률 및 지침 변경이나 회사의 내부 방침 변경 등으로 인하여 수시로 변경될 수 있고, 이에 따른 개인정보취급방침의 지속적인 개선을 위하여 필요한 절차를 정하고 있습니다. 그리고 개인정보취급방침을 개정하는 경우 회사는 개인정보취급방침 변경 시행 7일 전부터 (주) 케이웹미디어 공지사항을 통하여 공지하고 버전번호 및 개정일자 등을 부여하여 개정된 사항을 이용자들이 쉽게 알아볼 수 있도록 하고 있습니다.
+	<br><br>
+	(주) 케이웹미디어의 개인정보취급방침은 다음과 같은 내용을 담고 있습니다.
+	<br><br>
+	가. 개인정보 수집에 대한 동의<br>
+	나. 개인정보의 수집목적 및 이용목적<br>
+	다. (주) 케이웹미디어가 수집하는 개인정보의 보유 및 이용기간<br>
+	라. (주) 케이웹미디어가 수집한 개인정보의 공유 및 제공<br>
+	마. 이용자 자신의 개인정보 관리(열람,정정,삭제 등)에 관한 사항<br>
+	바. 쿠키(cookie)의 운영에 관한 사항<br>
+	사. 개인정보관련 기술적-관리적 대책<br>
+	아. 개인정보의 위탁처리<br>
+	자. 개인정보관련 의견수렴 및 불만처리에 관한 사항<br>
+	차. 회사 개인정보 관리책임자 및 담당자의 소속 - 성명 및 연락처<br>
+	카. 고지의 의무<br>
+	</div>
+
+	<div class="small_txt2">가. 개인정보 수집에 대한 동의</div>
+	<div class="small_txt3">
+	회사는 이용자들이 회사의 개인정보취급방침 또는 이용약관의 내용에 대하여 「동의」 버튼 또는 「취소」 버튼을 클릭할 수 있는 절차를 마련하여, 「동의」 버튼을 클릭하면 개인정보 수집에 대해 동의한 것으로 봅니다.
+	</div>
+	<div class="small_txt2">나. 개인정보의 수집목적 및 이용목적</div>
+	<div class="small_txt3">
+	"개인정보"라 함은 생존하는 개인에 관한 정보로서 당해 정보에 포함되어 있는 성명, 연락처, 이메일 등의 사항에 의하여 당해 개인을 식별할 수 있는 정보(당해 정보만으로는 특정 개인을 식별할 수 없더라도 다른 정보와 용이하게 결합하여 식별할 수 있는 것을 포함)를 말합니다. 대부분의 (주) 케이웹미디어 서비스는 별도의 사용자 등록이 없이 언제든지 사용할 수 있습니다. 그러나 회사는 로그인 기반의 회원 서비스를 통하여 이용자들에게 맞춤식 서비스를 비롯한 보다 더 향상된 양질의 서비스를 제공하기 위하여 이용자 개인의 정보를 수집하고 있습니다.<br>
+	회사는 이용자의 사전 동의 없이는 이용자의 개인 정보를 공개하지 않으며, 수집된 정보는 아래와 같이 이용하고 있습니다.
+	첫째, 이용자들이 제공한 개인정보를 바탕으로 보다 더 유용한 서비스를 개발할 수 있습니다. 회사는 신규 서비스개발이나 컨텐츠의 확충시에 기존 이용자들이 회사에 제공한 개인정보를 바탕으로 개발해야 할 서비스의 우선 순위를 보다 더 효율적으로 정하고, 회사는 이용자들이 필요로 할 컨텐츠를 합리적으로 선택하여 제공할 수 있습니다.<br>
+	둘째, 회사가 제공하는 각종 정보 및 서비스 등은 대부분 무료입니다. 회사는 이러한 무료 서비스를 제공하기 위해서 광고를 게재하고 있는데, 이용자들에 대한 정확한 개인정보를 바탕으로 각 서비스나 메뉴 등에 적절하게 광고와 내용들을 전달해 드릴 수 있으며, 이것은 궁극적으로 회사가 이용자 여러분들게 드리는 또 하나의 정보로서의 가치를 지니게 됩니다. 회사는 광고주들로부터 광고를 받아 광고주들이 대상으로 하려는 이용자의 유형에 맞게 광고를 보여줄 뿐, 광고주들에게는 절대로 이용자들의 개인정보를 보여주거나 제공하지 않습니다.
+	</div>
+	<div class="small_txt2">다. (주) 케이웹미디어가 수집하는 개인정보의 보유 및 이용기간</div>
+	<div class="small_txt3">
+	귀하의 개인정보는 다음과 같이 개인정보의 수집목적 또는 제공받은 목적이 달성되면 재생할 수 없는 방법으로 파기하는 것을 원칙으로 합니다. 다만, 회사는 불량 회원의 부정한 이용의 재발을 방지하기 위해, 이용계약 해지일로부터 1년간 해당 회원의 수집된 개인정보를 보유할 수 있습니다. 그리고 상법,전자상거래등에서의 소비자보호에 관한 법률 등 관계법령의 규정에 의하여 보존할 필요가 있는 경우 회사는 관계법령에서 정한 일정한 기간 동안 회원정보를 보관합니다. 이 경우 회사는 보관하는 정보를 그 보관의 목적으로만 이용하며 보존기간은 아래와 같습니다.
+	<br><br>
+	- 계약 또는 청약철회 등에 관한 기록 : 5년
+	<br>
+	- 대금결제 및 재화등의 공급에 관한 기록 : 5년
+	<br>
+	- 소비자의 불만 또는 분쟁처리에 관한 기록 : 3년
+	</div>
+	<div class="small_txt2" style="margin-left:10px;">수집항목</div>
+	<div class="small_txt3">
+	수집방법 : 당사 서비스 가입시<br>
+	필수항목 : 아이디, 비밀번호, 휴대전화번호, 이메일, 홈페이지 주소<br>
+
+	회사는 귀중한 회원의 개인정보를 안전하게 처리하며, 유출의 방지를 위하여 다음과 같은 방법을 통하여 개인정보를 파기합니다.
+	</div>
+	<div class="small_txt2" >라. 수집한 개인정보의 공유 및 제공</div>
+	<div class="small_txt3">
+	회사는 이용자들의 개인정보를 "나. 개인정보의 수집목적 및 이용목적"에서 고지한 범위내에서 사용하며, 이용자의 사전 동의 없이는 동 범위를 초과하여 이용하거나 원칙적으로 이용자의 개인정보를 외부에 공개하지 않습니다. 다만, 아래의 경우에는 예외로 합니다.
+	<br><br>
+	- 이용자들이 사전에 공개에 동의한 경우<br>
+	- 서비스 제공에 따른 요금정산을 위하여 필요한 경우<br>
+	- 홈페이지에 게시한 서비스 이용 약관 및 기타 회원 서비스 등의 이용약관 또는 운영 원칙을 위반한 경우<br>
+	- 서비스를 이용하여 타인에게 정신적, 물질적 피해를 줌으로써 그에 대한 법적인 조치를 취하기 위하여 개인정보를 공개해야 한다고 판단되는 충분한 근거가 있는 경우<br>
+	- 기타 법에 의해 요구된다고 선의로 판단되는 경우 (ex. 관련법에 의거 적법한 절차에 의한 정부/ 수사기관의 요청이 있는 경우 등)<br>
+	- 통계작성,학술연구나 시장조사를 위하여 특정개인을 식별할 수 없는 형태로 광고주, 협력업체나 연구 단체 등에 제공하는 경우<br>
+	- 이용자의 서비스 이용에 따른 불만사항 및 문의사항(민원사항)의 처리를 위하여 고객센터를 운영하는 전문업체에 해당 민원사항의 처리에 필요한 개인정보를 제공하는 경우 회사는 귀중한 회원의 개인정보를 안전하게 처리하며, 유출의 방지를 위하여 다음과 같은 방법을 통하여 개인정보를 파기합니다.
+	</div>
+	<div class="small_txt2" >마. 이용자 자신의 개인정보 관리(열람,정정,삭제 등)에 관한 사항</div>
+	<div class="small_txt3">
+	이용자는 언제든지 주식회사 스마트아이피를 이용하여 등록되어 있는 자신의 개인정보를 조회하거나 수정할 수 있으며 가입해지를 요청할 수도 있습니다.
+	이용자들의 개인정보 조회 및 수정을 위해서는 케이웹미디어 회원관리 메뉴에서 아이디와 비밀번호를 사용하여 로그인(LOG-IN)하면 되는데, 아이디(ID)를 제외한 모든 입력사항을 수정할 수 있습니다.
+	또한, 비밀번호를 잊어버린 경우에는 회원 로그인 메뉴 하단에 있는 "비밀번호 찾기"를 클릭하여 고객센터의 안내사항에 따라 본인 확인에 필요한 사항을 입력하시면, 본인여부 확인 후 SMS를 통하여 임시 비밀번호를 알려 드리거나 즉시 비밀번호 변경이 가능하십니다.
+	</div>
+	<div class="small_txt2" >바. 쿠키(cookie)의 운영에 관한 사항</div>
+	<div class="small_txt3">
+	이용자들에게 특화된 맞춤서비스를 제공하기 위해서 (주) 케이웹미디어는 이용자들의 정보를 저장하고 수시로 불러오는 '쿠키(cookie)'를 사용합니다. 쿠키는 웹사이트를 운영하는데 이용되는 서버((주) 케이웹미디어)가 이용자의 컴퓨터 브라우저에게 보내는 소량의 정보이며 이용자들의 PC 컴퓨터내의 하드디스크에 저장되기도 합니다.
+	이용자들이 스마트아이피에 접속한 후 로그인(LOG-IN)하여 회원서비스 및 주식회사 스마트아이피 등의 서비스를 이용하기 위해서는 쿠키를 허용하셔야 합니다. (주) 케이웹미디어는 이용자들에게 적합하고 보다 유용한 서비스를 제공하기 위해서 쿠키를 이용하여 아이디에 대한 정보를 찾아냅니다. 쿠키는 이용자의 컴퓨터는 식별하지만 이용자를 개인적으로 식별하지는 않습니다.
+	쿠키를 이용하여 이용자들이 방문한 (주) 케이웹미디어의 각 서비스와 웹 사이트들에 대한 방문 및 이용형태, 인기 검색어, 이용자 규모 등을 파악하여 더욱 더 편리한 서비스를 만들어 제공할 수 있고 이용자에게 최적화된 정보를 제공할 수 있습니다. 이용자들은 쿠키에 대하여 사용여부를 선택할 수 있습니다. 웹브라우저에서 옵션을 설정함으로써 모든 쿠키를 허용할 수도 있고, 쿠키가 저장될 때마다 확인을 거치거나, 모든 쿠키의 저장을 거부할 수도 있습니다. 다만, 쿠키의 저장을 거부할 경우에는 로그인이 필요한 케이웹미디어의 일부 서비스는 이용할 수 없습니다.
+	</div>
+	<div class="small_txt2" >사. 개인정보관련 기술적-관리적 대책</div>
+	<div class="small_txt3">
+	회사는 이용자들의 개인정보를 취급함에 있어 개인정보가 분실, 도난, 누출, 변조 또는 훼손되지 않도록 안전성 확보를 위하여 다음과 같은 기술적 대책을 강구하고 있습니다. 이용자들의 개인정보는 비밀번호에 의해 철저히 보호되고 있습니다. (주) 케이웹미디어 회원 아이디(ID)의 비밀번호는 본인만이 알고 있으며, 개인정보의 확인 및 변경도 비밀번호를 알고 있는 본인에 의해서만 가능합니다. 따라서 이용자 여러분께서는 비밀번호를 누구에게도 알려주시면 안됩니다. 이를 위해 회사에서는 기본적으로 PC에서의 사용을 마치신 후 온라인상에서 로그아웃(LOG-OUT)하시고 웹브라우저를 종료하도록 권장합니다. 특히 다른 사람과 PC를 공유하여 사용하거나 공공장소(회사나 학교, 도서관, 인터넷 게임방 등)에서 이용한 경우에는 개인정보가 다른 사람에게 알려지는 것을 막기 위해 위와 같은 절차가 더욱 필요할 것입니다.<br>
+	회사는 해킹이나 컴퓨터 바이러스 등에 의해 회원의 개인정보가 유출되거나 훼손되는 것을 막기 위해 최선을 다하고 있습니다. 개인정보의 훼손에 대비해서 자료를 수시로 백업하고 있고, 최신 백신프로그램을 이용하여 이용자들의 개인정보나 자료가 누출되거나 손상되지 않도록 방지하고 있으며, 암호화통신 등을 통하여 네트워크상에서 개인정보를 안전하게 전송할 수 있도록 하고 있습니다. 그리고 침입 차단 시스템을 이용하여 외부로부터의 무단 접근을 통제하고 있으며, 기타 시스템적으로 보안성을 확보하기 위한 가능한 모든 기술적 장치를 갖추려 노력하고 있습니다.<br>
+	회사의 개인정보관련 취급 직원은 담당자에 한정시키고 있고 이를 위한 별도의 비밀번호를 부여하여 정기적으로 갱신하고 있으며, 담당자에 대한 수시 교육을 통하여 (주) 케이웹미디어 개인정보취급방침의 준수를 항상 강조하고 있습니다. 그리고 사내 개인정보전담기구 등을 통하여 (주) 케이웹미디어 개인정보취급방침의 이행사항 및 담당자의 준수여부를 확인하여 문제가 발견될 경우 즉시 수정하고 바로 잡을 수 있도록 노력하고 있습니다. 단, 이용자 본인의 부주의나 인터넷상의 문제로 ID, 비밀번호 등 개인정보가 유출해 발생한 문제에 대해 회사는 일체의 책임을 지지 않습니다.
+	</div>
+	<div class="small_txt2" >아. 개인정보의 위탁처리</div>
+	<div class="small_txt3">
+	회사는 서비스 향상을 위해서 이용자들의 개인정보를 외부전문업체에 위탁하여 처리할 수 있습니다. 개인정보의 처리를 위탁하는 경우에는 미리 그 사실을 이용자들에게 공지할 것입니다. 또한 위탁계약 등을 통하여 서비스 제공자의 개인정보보호 관련 지시엄수, 개인정보에 관한 비밀유지, 제3자 제공의 금지 및 사고시의 책임부담 등을 명확히 규정하고 당해 계약내용을 서면 또는 전자적으로 보관할 것입니다.
+	</div>
+	<div class="small_txt2" >자. 개인정보관련 의견수렴 및 불만처리에 관한 사항</div>
+	<div class="small_txt3">
+	회사는 개인정보보호와 관련하여 이용자 여러분들의 의견을 수렴하고 있으며 불만을 처리하기 위하여 모든 절차와 방법을 마련하고 있습니다. 이용자들은 하단에 명시한 "(주) 케이웹미디어 개인정보 관리책임자 및 담당자의 소속-성명 및 연락처" 항을 참고하여 전화나 메일을 통하여 불만사항을 신고할 수 있고, 회사는 이용자들의 신고사항에 대하여 신속하고도 충분한 답변을 해 드릴 것입니다.
+	또는 정부에서 설치하여 운영중인 아래의 기관에 불만처리를 신청할 수 있습니다.<br>
+
+	- 개인정보 침해신고센터 (https://privacy.kisa.or.kr/, 전화 (국번없이) 118)<br>
+	- 개인정보 분쟁조정위원회 (https://www.kopico.go.kr/, 전화 (국번없이) 1833-6972)<br>
+	- 대검찰청 사이버범죄수사단 (https://www.spo.go.kr/, 전화 02-3480-3573)<br>
+	- 경찰청 사이버안전국 (http://cyberbureau.police.go.kr, 전화 (국번없이) 182)<br>
+	- 경찰청 (https://www.police.go.kr/)
+	</div>
+	<div class="small_txt2" >차. 회사 개인정보 관리책임자 및 담당자의 소속 - 성명 및 연락처</div>
+	<div class="small_txt3">
+	회사는 이용자가 좋은 정보를 안전하게 이용할 수 있도록 최선을 다하고 있습니다. 개인정보를 보호하는데 있어 이용자께 고지한 사항들에 반하는 사고가 발생할 경우 개인정보관리 책임자가 책임을 집니다.<br>
+	이용자 개인정보와 관련한 아이디(ID)의 비밀번호에 대한 보안유지책임은 해당 이용자 자신에게 있습니다. 회사는 비밀번호에 대해 어떠한 방법으로도 이용자에게 직접적으로 질문하는 경우는 없으므로 타인에게 비밀번호가 유출되지 않도록 각별히 주의하시기 바랍니다. 공공장소에서 온라인상에서 접속해 있을 경우에는 더욱 유의하셔야 합니다. 회사는 개인정보에 대한 의견수렴 및 불만처리를 담당하는 개인정보 관리책임자 및 담당자를 지정하고 있습니다.
+	(담당자 황지하 : 02-1588-0936)
+	</div>
+	<div class="small_txt2" >카. 고지의 의무</div>
+	<div class="small_txt3">
+	현 개인정보취급방침의 내용 추가, 삭제 및 수정이 있을 시에는 개정 최소 7일 전부터 홈페이지의 '공지사항' 을 통해 고지할 것입니다.
+	</div>
+	<br>
+	<br>
+	<br>
+</div>								</div>
+							</div>
+							<div class="footer_box">
+								<input type="button" value="돌아가기" id="backbtn" onClick="location.href='./login?workName=join'">
+							</div>
+						</form>		
+					</div>
+					<!--개인정보 처리 방침 종료-->
+					<!--이용약관 시작-->
+							<div class="main_box agreement_main_box ">
+								<form action="https://hillsideurbancity.bunyangnara.kr/admin/login_reg.php" name="login_form">
+									<div class="header_box">
+										<span>
+											이용약관
+										</span>
+									</div>
+									<div class="body_box">
+										<div class="text_box">
+											<style>
+.small_txt1 {font-size: 15px;padding-top: 50px;}
+.small_txt2 {font-size: 15px;padding-top: 20px;font-weight: bold;}
+.small_txt3 {font-size: 15px;padding-top: 10px;padding-left: 10px;}
+.small_txt4 {font-size: 14px;padding-top: 10px;padding-left: 10px;line-height: 1.4;}
+.text_indent {text-indent: 1em;margin-top: -1.5em;}
+.text_indent2 {text-indent: 1em;margin-top: 1em;}
+.text_indent3 {text-indent: 1em;}
+.text_indent4 {text-indent: 1em;margin-top: 0.7em;}
+.text_indent5 {text-indent: 2em;}
+.text_indent6 {text-indent: 2em;margin-top: 0.7em;}
+</style>
+<div class="notice_list">
+<div class="small_txt2">제 1 조 (목적)</div>
+<div class="small_txt3">
+본 약관은 (주) 케이웹미디어(이하 "회사")가 제공하는 예약 서비스(이하 "서비스")를 이용함에 있어 “회사”와 “회원”간에 제반사항을 규정함을 목적으로 합니다.
+</div>
+<div class="small_txt2">제 2 조 (정의)</div>
+<div class="small_txt3">
+① “회원”이라 함은 “서비스”를 이용하기 위해 이 약관에 따라 “회사”와 이용계약을 쳬결하고, “회사”가 제공하는 “서비스”를 이용하는 고객을 말합니다.</div>
+<div class="small_txt2">제 3 조 (준용)</div>
+<div class="small_txt3">
+본 약관에 명시되지 않은 사항은 회사의 웹사이트 내에 게시된 내용 또는 전기통신기본법, 전기통신사업법 및 기타 관련법령에 따릅니다.
+</div>
+<div class="small_txt2">제 4 조 (약관의 명시 및 개정)</div>
+<div class="small_txt3">
+1. 본 약관은 회사의 웹사이트 내에 게시 또는 기타의 방법으로 회원에게 공지합니다. </br>
+2. 회사는 필요에 따라 이 약관을 개정할 수 있으며, 약관을 개정할 경우에는 적용일자 및 개정사유를 명시하여 제1항의 방식에 따라 그 개정약관을 적용일자 7일 전부터 적용일자 전일까지 공지합니다. 다만, 회원에게 불리하거나 중요한 사항을 변경하는 경우에는 적용일자 30일 이상의 유예기간을 두고 공지하며, 공지 외에 일정기간 회원의 전자우편, 로그인 시 동의창 등의 전자적 수단을 통해 따로 명확히 공지합니다.</br>
+3. 회사가 전 항에 따라 개정약관을 공지 또는 통지하면서 회원에게 개정약관 적용일자 전까지 의사표시를 하지 않으면 개정약관에 동의한 것으로 본다는 뜻을 명확하게 공지 또는 통지하였음에도 회원이 명시적으로 거부의사를 표명하지 아니한 경우 회원이 개정 약관에 동의한 것으로 봅니다.</br>
+4. 회원이 개정약관의 내용에 동의하지 않는 경우 회사는 해당 회원에 대하여 개정약관의 내용을 적용할 수 없으며, 이 경우 회사는 회원과의 이용계약을 해지하거나 회원의 서비스 이용을 제한할 수 있습니다. 또한 회사가 개정약관에 동의하지 않은 회원에게 기존 약관을 적용할 수 없는 특별한 사정이 있는 경우 해당 회원과의 이용계약을 해지할 수 있습니다.
+</div>
+<div class="small_txt2">제 5 조 (서비스의 종류)</div>
+<div class="small_txt3">
+회사가 제공하는 서비스의 종류는 서비스 신청서에 정의한 바에 따릅니다.
+</div>
+<div class="small_txt2">제 6 조 (서비스 이용신청)</div>
+<div class="small_txt3">
+서비스 신청시 약관에 동의하는 경우 서비스를 신청할 수 있습니다. 다음의 경우 약관에 동의한 것으로 간주합니다.</br></br>
+<div class="text_indent">
+가. 서비스의 이용신청은 ID별 한 사이트를 원칙으로 하며, 동일한 ID로 복수의 사이트에 대한 서비스를 받을 경우 별도의 회사의 승인이 있어야 합니다.서비스 이용을 위해 회사에 스크립트 적용을 의뢰할 경우, FTP계정 또는 관리자계정을 알려 줄 의무가 있습니다.</div>
+</div>
+<div class="small_txt2">제 7 조 (서비스 이용계약 성립)</div>
+<div class="small_txt3">
+서비스 이용계약은 회사에서 정한 가입신청양식을 작성하여 회사에 온라인으로 제출한 후, 유료 회원인 경우 서비스 사용요금을 결제하는 것으로써 최종 이루어집니다. 회원의 서비스 이용신청에 회사가 승낙하는 경우 서비스 이용계약이 성립됩니다.
+</div>
+<div class="small_txt2">제 8 조 (서비스 이용계약의 거부 및 해지)</div>
+<div class="small_txt3">
+회원의 귀책사유로 서비스를 사용하지 않을 경우, 서비스 기간에 대하여 유료 회원인 경우 납부한 서비스요금은 환불되지 않습니다. 회사의 귀책사유로 서비스를 중지하게 될 경우, 유료 회원인 경우 남은 서비스기간에 해당하는 서비스요금을 월할 계산하여 환불합니다. (단, 한번이라도 사용한 월은 환불되지 않습니다.) 서비스 약관 등의 변경에 따라 새로운 약관에 동의할 수 없는 경우 서비스의 해지를 신청 할 수 있습니다. 회사는 다음의 경우 서비스의 승낙을 거부, 유보 할 수 있습니다. </br></br>
+<div class="text_indent">
+가. 서비스에 필요한 시설부족 및 관리가 어려운 경우 </br></div>
+<div class="text_indent3">
+나. 국내법에 위반되는 사이트에 본 서비스를 적용하려고 하는 경우 </br></div>
+<div class="text_indent3">
+다. 타 개인 및 단체의 정보를 이용하여 회원정보를 허위 기재한 경우 </br></div>
+<div class="text_indent3">
+라. 본인의 의사와 관계없이 타인에 의해 가입된 경우 </br></div>
+<div class="text_indent3">
+마. 기타 회사가 필요하다고 판단되는 경우 회사는 다음의 경우에 회원의 합의 없이 또는 사전 통보 없이 일방적으로 서비스를 해지 할 수 있습니다. </br></div>
+<div class="text_indent6">
+① 서비스 이용요금 납입책임자가 회사에 납입할 이용요금을 납입하지 아니한 경우 </br></div>
+<div class="text_indent5">
+② 회원의 사이트가 국내법에 위반되어 회사에 피해가 예상되는 경우 </br></div>
+<div class="text_indent5">
+③ 고의적으로 회사의 서비스에 장애를 일으키기 위하여 한 행동으로 판단되는 경우 </br></div>
+<div class="text_indent5">
+④ 본 약관을 위반한 경우 </br></div>
+<div class="text_indent5">
+⑤ 기타 회사가 필요하다고 판단되는 경우 성인사이트 및 도박 게임아이템거래 중개 등 불법사이트에는 적용접수를 받지 않습니다. 발견 즉시 서비스가 중지됩니다. </div>
+<div class="text_indent5">
+한 개 사이트 적용 계약이며, 하나의 계정으로 두 개 이상의 사이트를 운영할 경우 발견 즉시 한 개 사이트의 서비스가 중지됩니다.</div>
+</div>
+<div class="small_txt2">제 9 조 (서비스 개시일)</div>
+<div class="small_txt3">
+서비스 개시일은 회원가 서비스를 신청한 후 유료 회원인 경우 사용요금을 납부하여, 회사가 서비스가 제공 가능하도록 서비스 설정 및 승인을 한 날짜로 합니다.
+</div>
+<div class="small_txt2">제 10 조 (서비스의 이용기간)</div>
+<div class="small_txt3">
+서비스 이용기간은 개시일부터 종료일까지로 합니다. 서비스 이용기간이 종료되는 일자부터 회사는 서비스 제공과 관련된 모든 의무가 소멸됩니다. 무료 회원인 경우 서비스 이용을 즉시 또는 공고 후 중지할 수도 있습니다.
+</div>
+<div class="small_txt2">제 11 조 (서비스의 요금 및 결제)</div>
+<div class="small_txt3">
+서비스의 요금은 서비스 신청서에 따라 책정된 금액을 기술한 내용으로 청구합니다. 입금된 금액은 환불되지 않습니다. 결제는 카드결제와 무통장(가상계좌)으로 하며, PG 결제 대행사를 통하여 결제 받습니다.
+</div>
+<div class="small_txt2">제 12 조 (이용요금의 할인 및 할증)</div>
+<div class="small_txt3">
+유료 회원인 경우 회사는 방침에 따라 이용요금을 일시적으로 할인, 할증 할 수 있습니다.
+</div>
+<div class="small_txt2">제 13 조 (서비스 이용에 의한 산출물 보호 및 보유기간)</div>
+<div class="small_txt3">
+서비스이용에 의한 산출물, 즉 로그분석 결과데이터는 회원의 동의 없이 회사가 제3자에게 제공할 수 없습니다. 서비스이용에 의한 산출물은 회원이 서비스를 사용하는 기간 및 서비스기간 종료 후 1개월간 보관하며, 그 이후로는 회원에게 통보 없이 삭제될 수 있으며, 서비스 이용기간에만 해당 산출물이 생성됩니다. 서비스 이용 중인 경우 부정클릭 메뉴 등의 접속별 (PC)IP 리스트에 대한 자료는 6개월간 보관되며, 그 외 모든 메뉴의 로그분석 데이터와 리포트 정보는 5년간 보관됩니다.
+</div>
+<div class="small_txt2">제 14 조 (회원의 의무)</div>
+<div class="small_txt3">
+회원은 관계 법령 및 약관의 규정에 따라야 합니다. 회원은 회사의 사전 동의 없이 서비스의 재판매 및 영업 등 영리행위를 할 수 없습니다. 회원은 자신의 ID와 비밀번호를 유지 관리할 책임이 있으며, 그 관리 소홀과 부정사용 등으로 인한 모든 결과에 대하여 전적인 책임이 있습니다. 회원은 서비스와 관련하여 아래 사항을 하여서는 안 됩니다. </br></br>
+
+가. 서비스의 내용을 회사의 사전 승낙 없이 타인에게 제공 하거나 변조, 유포시키는 행위 </br>
+나. 서비스의 해킹 또는 컴퓨터 바이러스를 유포하는 행위 </br>
+다. 기타 서비스의 운영에 지장을 주거나 줄 우려가 있는 일체의 행위 </br>
+라. 기타 관계 법령에 위배되는 행위 </br>
+</div>
+<div class="small_txt2">제 15 조 (손해배상)</div>
+<div class="small_txt3">
+회사가 제공하는 서비스와 관련하여 회사의 귀책사유인 경우를 제외하고 회사는 서비스 및 그의 이용으로 발생할 수 있는 회원의 어떠한 피해에 대하여 책임을 지지 않습니다. 회원이 약관의 규정을 위반함으로 인하여 회사의 영업활동에 손해가 발생하게 되는 경우, 해당 회원은 회사에 손해를 배상해야 할 책임이 있습니다. 손해가 다음 각 호에 해당하는 경우에는 손해배상을 아니한다. </br></br>
+<div class="text_indent">
+가. 전시, 사변, 천재지변, 또는 이에 준하는 국가비상사태 등 불가항력적인 경우 </br></div>
+<div class="text_indent3">
+나. 회원의 고의 또는 과실로 인하여 발생한 경우 </br></div>
+<div class="text_indent3">
+다. 전기통신사업법에 의한 타 기간통신사업자가 제공하는 전기통신서비스 장애로 인한 경우</br></div>
+<div class="text_indent3">
+단, 불가항력적인 피해의 경우 공동 책임, 공동대응을 원칙으로 합니다.</div>
+</div>
+
+<div class="small_txt2">제 16 조 (관할법원)</div>
+<div class="small_txt3">
+서비스이용으로 인한 분쟁이 발생된 경우 회사의 본사 소재지 법원을 관할법원으로 합니다.
+</div>
+<div class="small_txt2">부칙</div>
+<div class="small_txt3">
+제 1 조 (시행일)<br>
+
+이 약관은 2024년 01월 09일 부터 적용됩니다.<br>
+---------------------------------------------------<br>
+	(주) 케이웹미디어 Tel : 1800-8314<br>
+---------------------------------------------------<br>
+<br><br><br>
+</div>		
+
+</div><!-- notice_list-->										</div>
+									</div>
+									<div class="footer_box">
+										<input type="button" value="돌아가기" id="backbtn" onClick="location.href='./login?workName=join'">
+									</div>
+								</form>		
+							</div>
+					<!--이용약관 방침 종료-->
+					<!--로그인 시작-->		
+							<div class="main_box pass_main_box ">
+								<form action="https://hillsideurbancity.bunyangnara.kr/admin/login_reg.php" name="login_form">
+									<div class="header_box">
+										<span>
+											Find Password
+										</span>
+									</div>
+									<div class="body_box">
+										<div class="form-group" ng-class="{'not-empty': userName.length}">
+											<input type="text" class="form-control" name="id2"  id="id2" ng-model="아이디"/>
+											<label for="id2" class="animated-label">아이디</label>
+										</div>
+										<div class="flex">
+											<div class="form-group">
+												<input type="text" class="form-control" name="phone11"  id="phone11" maxlength="3" oninput="only_number(this)"/>
+												<label for="phone11" class="animated-label">*휴대폰 번호</label>
+											</div>
+											<div class="form-group">
+												<input type="text" class="form-control" name="phone22"  id="phone22" maxlength="4" oninput="only_number(this)"/>
+												<label for="phone22" class="animated-label">*휴대폰 앞자리</label>
+											</div>
+											<div class="form-group">
+												<input type="text" class="form-control" name="phone33"  id="phone33" maxlength="4" oninput="only_number(this)"/>
+												<label for="phone33" class="animated-label">*휴대폰 뒷자리</label>
+											</div>
+										</div>
+									</div>
+									<div class="footer_box">
+										<input type="button" value="임시 비밀번호 발급" id="find_pw_btn" onClick="find_passwd();">
+										<div>
+											<span>
+												<font id="go_login"  onClick="location.href='./login?workName=login'">로그인 하러가기</font>
+											</span>
+										</div>
+									</div>
+								</form>		
+							</div>
+					<!--로그인 종료-->		
+				        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+	<a href="http://pf.kakao.com/_xkSxexmG/chat" target="_blank" style="position: fixed; right: 20px; bottom: 50px; width: 60px; height: 60px; border-radius: 50%; background-image: url(https://hillsideurbancity.bunyangnara.kr/admin/images/talk.svg); overflow: hidden; background-position: center; background-size: 80px; border: 1px solid #26c6da; opacity: 1; cursor: pointer; z-index: 99;"></a>
+  <!-- container-scroller -->
+	<!-- Modal -->
+<div class="modal fade" id="menu_tab_modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body" id="id_search_view_modal_body">
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				<div id="menu_tab_modal_body_contents">
+				<!-- 내용 시작 -->
+				<!-- 내용 종료 -->
+				</div>
+      </div>
+    </div>
+  </div>
+</div>	<!-- Modal -->
+<div class="modal fade" id="gallery_tab_modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body" id="id_search_view_modal_body">
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				<div id="allery_tab_modal_body_contents">
+				<!-- 내용 시작 -->
+				<!-- 내용 종료 -->
+				</div>
+      </div>
+    </div>
+  </div>
+</div>	<!-- Modal -->
+<div class="modal fade" id="id_select_modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body" id="id_page_view_modal_body">
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				<div id="id_select_modal_body_contents">
+				<!-- 내용 시작 -->
+					
+				<!-- 내용 종료 -->
+				</div>
+      </div>
+    </div>
+  </div>
+</div>	<!-- Modal -->
+<div class="modal fade" id="home_select_modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body" id="home_page_view_modal_body">
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				<div id="home_select_modal_body_contents">
+				<!-- 내용 시작 -->
+					
+				<!-- 내용 종료 -->
+				</div>
+      </div>
+    </div>
+  </div>
+</div>	<!-- Modal -->
+<div class="modal fade" id="home_design_modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body" id="home_page_view_modal_body2">
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				<div id="home_design_modal_body_contents">
+				<!-- 내용 시작 -->
+				<!-- 내용 종료 -->
+				</div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script>
+function home_design_save(){
+	const formData = new FormData();	
+	const { value: tema_num }							= document.getElementById("dTema_num");
+	const { value: office_name }					= document.getElementById("d_office_name");
+	const { value: office_user }					= document.getElementById("d_office_user");
+	const { value: tel }									= document.getElementById("d_tel");
+	const { value: tel2 }									= document.getElementById("d_tel2");
+	const { value: tel3 }									= document.getElementById("d_tel3");
+	const { value: fax }									= document.getElementById("d_fax");
+	const { value: fax2 }									= document.getElementById("d_fax2");
+	const { value: fax3 }									= document.getElementById("d_fax3");	
+	const { value: office_num }						= document.getElementById("d_office_num");
+	const { value: office_num2 }					= document.getElementById("d_office_num2");
+	const { value: office_num3 }					= document.getElementById("d_office_num3");
+	const { value: office_num100 }				= document.getElementById("d_office_num100");
+	const { value: office_address_num }		= document.getElementById("d_office_address_num");
+	const { value: si }										= document.getElementById("d_si");
+	const { value: goo }									= document.getElementById("d_goo");
+	const { value: add_address }					= document.getElementById("d_add_address");
+	const { value: office_cat }						= document.getElementById("d_office_cat");
+	const { value: office_cat2 }					= document.getElementById("d_office_cat2");	
+	const { value: office_weekday }				= document.getElementById("d_office_weekday");
+	const { value: office_weekend }				= document.getElementById("d_office_weekend");
+	const { value: memo }									= document.getElementById("d_memo");
+
+	const { value:office_bank_name }			= document.getElementById("s_office_bank_name");
+	const { value:total_money }						= document.getElementById("s_total_money");
+	const { value:office }								= document.getElementById("s_office");
+	const { value:office_name_10 }				= document.getElementById("s_office_name");
+	const { value:office_email }					= document.getElementById("s_office_email");
+	const { value:office_num_10 }					= document.getElementById("s_office_num");
+	const { value:office_cat_10 }					= document.getElementById("s_office_cat");
+	const { value:office_cat2_10 }				= document.getElementById("s_office_cat2");
+	const { value:office_address }				= document.getElementById("s_office_address");
+	const { value:office_phone }					= document.getElementById("s_office_phone");
+	const { value:tax  }									= document.querySelector('input[name="tax"]:checked');
+	
+	
+
+	const work = "home_design";	
+	if(office_name == ""){
+		$.alert({content:"현장명을 입력해주세요.", type:'red', onDestroy: function() {	
+			document.getElementById('d_office_name').focus();
+		} });
+		return false;				
+	}
+	if(office_user == ""){
+		$.alert({content:"담당자를 입력해주세요.", type:'red', onDestroy: function() {	
+			document.getElementById('d_office_user').focus();
+		} });
+		return false;				
+	}
+	if(tel && tel2 == ""){
+		$.alert({content:"대표번호 2번째 자리를 입력해주세요", type:'red', onDestroy: function() {	
+			document.getElementById('d_tel2').focus();
+		} });
+		return false;			
+	}
+	if(tel && tel3 == ""){
+		$.alert({content:"대표번호 3번째 자리를 입력해주세요", type:'red', onDestroy: function() {	
+			document.getElementById('d_tel3').focus();
+		} });
+		return false;			
+	}
+
+	if(fax && fax2 == ""){
+		$.alert({content:"FAX 번호 2번째 자리를 입력해주세요", type:'red', onDestroy: function() {	
+			document.getElementById('d_fax2').focus();
+		} });
+		return false;			
+	}
+	if(fax && fax3 == ""){
+		$.alert({content:"FAX 번호 3번째 자리를 입력해주세요", type:'red', onDestroy: function() {	
+			document.getElementById('d_fax3').focus();
+		} });
+		return false;			
+	}
+
+	if(office_num && office_num2 == ""){
+		$.alert({content:"사업자 등록 번호 2번째 자리를 입력해주세요", type:'red', onDestroy: function() {	
+			document.getElementById('d_office_num2').focus();
+		} });
+		return false;			
+	}
+	if(office_num && office_num3 == ""){
+		$.alert({content:"사업자 등록 번호 3번째 자리를 입력해주세요", type:'red', onDestroy: function() {	
+			document.getElementById('d_office_num3').focus();
+		} });
+		return false;			
+	}
+	if(office_bank_name == ""){
+		$.alert({content:"입금자명을 입력해주세요", type:'red', onDestroy: function() {	
+			document.getElementById('s_office_bank_name').focus();
+		} });
+		return false;			
+	}
+	if(tax == "A"){
+		if(office == ""){
+			$.alert({content:"상호를 입력해주세요!", type:'red', onDestroy: function() {	
+				document.getElementById("s_office").focus();
+			} });
+			return false;			
+		}
+		if(office_name == ""){
+			$.alert({content:"대표자를 입력해주세요!", type:'red', onDestroy: function() {	
+				document.getElementById("s_office_name").focus();
+			} });
+			return false;			
+		}
+		if(office_email == ""){
+			$.alert({content:"이메일주소를 입력해주세요!", type:'red', onDestroy: function() {	
+				document.getElementById("s_office_email").focus();
+			} });
+			return false;			
+		}
+		if(office_num == ""){
+			$.alert({content:"사업자 번호를 입력해주세요!", type:'red', onDestroy: function() {	
+				document.getElementById("s_office_num").focus();
+			} });
+			return false;			
+		}
+		if(office_cat == ""){
+			$.alert({content:"업태를 입력해주세요!", type:'red', onDestroy: function() {	
+				document.getElementById("s_office_cat").focus();
+			} });
+			return false;			
+		}
+		if(office_cat2 == ""){
+			$.alert({content:"종목을 입력해주세요!", type:'red', onDestroy: function() {	
+				document.getElementById("s_office_cat2").focus();
+			} });
+			return false;			
+		}
+		if(office_address == ""){
+			$.alert({content:"주소지를 입력해주세요!", type:'red', onDestroy: function() {	
+				document.getElementById("s_office_address").focus();
+			} });
+			return false;			
+		}
+	}	//tax A 닫기
+	if(tax == "B"){
+		if(office_phone == ""){
+			$.alert({content:"전화번호를 입력해주세요!", type:'red', onDestroy: function() {	
+				document.getElementById("s_office_phone").focus();
+			} });
+			return false;			
+		}
+	}	//tax B 닫기	
+
+	formData.append('work', work	);
+	formData.append('tema_num', tema_num);
+	formData.append('office_name', office_name);
+	formData.append('office_user', office_user);
+	formData.append('tel', tel);
+	formData.append('tel2', tel2);
+	formData.append('tel3', tel3);
+	formData.append('fax', fax);
+	formData.append('fax2', fax2);
+	formData.append('fax3', fax3);
+	formData.append('office_num', office_num);
+	formData.append('office_num2', office_num2);
+	formData.append('office_num3', office_num3);
+	formData.append('office_num100', office_num100);
+	formData.append('office_address_num', office_address_num);
+	formData.append('si', si);
+	formData.append('goo', goo);
+	formData.append('add_address', add_address);
+	formData.append('office_cat', office_cat);
+	formData.append('office_cat2', office_cat2);
+	formData.append('office_weekday', office_weekday);
+	formData.append('office_weekend', office_weekend);
+	formData.append('memo', memo);
+	formData.append('office_bank_name', office_bank_name);
+	formData.append('total_money', total_money);	
+	formData.append('office', office);		
+	formData.append('office_name_10', office_name_10);	
+	formData.append('office_email', office_email);	
+	formData.append('office_num_10', office_num_10);		
+	formData.append('office_cat_10', office_cat_10);	
+	formData.append('office_cat2_10', office_cat2_10);
+	formData.append('office_address', office_address);
+	formData.append('tax', tax);
+/*
+formData.forEach((value, key) => {
+  console.log(`키: ${key}, 값: ${value}`);
+});
+return false;
+*/
+	jQuery.ajax({
+		type: 'POST',
+		url: '/admin/pages/home_design_reg_m.php',
+		data: formData,
+		processData: false,  // 중요: FormData 객체를 변환하지 않도록 설정
+		contentType: false,  // 중요: Content-Type 헤더를 설정하지 않도록 설정
+		success: function(data) {
+			console.log(data);
+			if(data == "I"){
+				$.alert({content:"이미 요청한 내역이 존재합니다.\r\n", type:'green', onDestroy: function() {	
+						//const modal = bootstrap.Modal.getInstance(document.getElementById('home_design_modal'));
+            //modal.hide();
+				} });				
+			}else if (data == '1') {
+				$.alert({content:"저장했습니다.", type:'green', onDestroy: function() {	
+					 const modal = bootstrap.Modal.getInstance(document.getElementById('home_design_modal'));
+            modal.hide();
+				} });	
+			}else{
+				$.alert({content:"일시적인 오류가 발생했습니다\r\n잠시후에 다시 시도해주세요!", type:'red', onDestroy: function() {	
+				} });	
+			}
+		},
+		error: function(err) {
+			//console.error(err);
+		}
+	});
+}
+
+function on_tax(v){
+	if(v == "A"){
+		document.querySelector(".tax_a_table").style.display = "block";
+		document.querySelector(".tax_b_table").style.display = "none";
+	}else if(v == "B"){
+		document.querySelector(".tax_b_table").style.display = "block";
+		document.querySelector(".tax_a_table").style.display = "none";
+	}else{
+		document.querySelector(".tax_a_table").style.display = "none";
+		document.querySelector(".tax_b_table").style.display = "none";
+	}
+}
+		
+function sample6_execDaumPostcode2() {
+	var width = 500; //팝업의 너비
+	var height = 600; //팝업의 높이
+
+	new daum.Postcode({
+		width: width,
+		height: height,
+		oncomplete: function(data) {
+			// 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+
+			// 각 주소의 노출 규칙에 따라 주소를 조합한다.
+			// 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+			var fullAddr = ''; // 최종 주소 변수
+			var fullAddr2 = ''; // 최종 주소 변수
+			var extraAddr = ''; // 조합형 주소 변수
+			var sido_up = '';
+
+			fullAddr = data.roadAddress;
+			fullAddr2 = data.jibunAddress;
+
+			//법정동명이 있을 경우 추가한다.
+			if(data.bname !== ''){
+				extraAddr += data.bname;
+			}
+			// 건물명이 있을 경우 추가한다.
+			if(data.buildingName !== ''){
+				extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+			}
+
+			if(data.bname == ''){
+				// 조합형주소의 유무에 따라 양쪽에 괄호를 추가하여 최종 주소를 만든다.
+				fullAddr += (extraAddr !== '' ? ' ('+ extraAddr +')' : '');
+			}
+			if (extraAddr) extraAddr = ' ('+ extraAddr +')';
+
+			if (data.sido) sido_up+=data.sido+' ';
+			if (data.sigungu) sido_up+=data.sigungu+' ';
+
+			var jbSplit = fullAddr.split(sido_up);
+			var jbSplit2 = fullAddr2.split(sido_up);
+
+			// 우편번호와 주소 정보를 해당 필드에 넣는다.
+			document.getElementById("d_office_address_num").value = data.zonecode; //5자리 기초구역번호 사용
+			document.getElementById("d_add_address").value = jbSplit[1]+extraAddr;;
+			var te = data.sido;
+			if(te == "세종특별자치시" || te == "제주특별자치도"){
+			document.getElementById("d_si").value = te.substring(0,2);
+			}else{
+			document.getElementById("d_si").value = data.sido;
+			}
+			document.getElementById("d_goo").value = data.sigungu;
+		}
+	}).open({
+		left: (window.screen.width / 2) - (width / 2),
+		top: (window.screen.height / 2) - (height / 2)
+	});
+}
+</script>	<!-- Modal -->
+<div class="modal fade" id="agr1_modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body" id="home_page_view_modal_body">
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				<div id="modal_body_contents">
+				<!-- 내용 시작 -->
+          <div class="row">
+            <div class="col-lg-112 col-jk-12 grid-margin stretch-card">
+							<input type="hidden" id="work2" value="">
+							<input type="hidden" id="page" value="">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">이용제한업종</h4>
+									<div>
+										<div class="notice_list">
+											<div class="small_txt2">성인, 도박, 게임서버, 불법컨텐츠를 다루는 사이트<br>
+가상화폐 관련 모든 업종, 마진거래, 재테크 알선, 주식 매매 프로그램<br>
+게임 대리 및 강의, 출장마사지, 디지털 장의사, 마케팅 상위노출 업체<br>
+상품권 및 카드 현금화, 검색 엔진 크롤링 용도의 사이트</div>
+											<br><br>
+											<div class="small_txt2">해당 사이트 개설 시 회원 이용이 제한되고 무통보 삭제됩니다.</div>
+										</div>
+																			</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				<!-- 내용 종료 -->
+				</div>
+      </div>
+    </div>
+  </div>
+</div>	<!-- Modal -->
+<div class="modal fade" id="agr2_modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body" id="home_page_view_modal_body">
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				<div id="modal_body_contents">
+				<!-- 내용 시작 -->
+          <div class="row">
+            <div class="col-lg-112 col-jk-12 grid-margin stretch-card">
+							<input type="hidden" id="work2" value="">
+							<input type="hidden" id="page" value="">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">이용약관</h4>
+									<div>
+										<style>
+.small_txt1 {font-size: 15px;padding-top: 50px;}
+.small_txt2 {font-size: 15px;padding-top: 20px;font-weight: bold;}
+.small_txt3 {font-size: 15px;padding-top: 10px;padding-left: 10px;}
+.small_txt4 {font-size: 14px;padding-top: 10px;padding-left: 10px;line-height: 1.4;}
+.text_indent {text-indent: 1em;margin-top: -1.5em;}
+.text_indent2 {text-indent: 1em;margin-top: 1em;}
+.text_indent3 {text-indent: 1em;}
+.text_indent4 {text-indent: 1em;margin-top: 0.7em;}
+.text_indent5 {text-indent: 2em;}
+.text_indent6 {text-indent: 2em;margin-top: 0.7em;}
+</style>
+<div class="notice_list">
+<div class="small_txt2">제 1 조 (목적)</div>
+<div class="small_txt3">
+본 약관은 (주) 케이웹미디어(이하 "회사")가 제공하는 예약 서비스(이하 "서비스")를 이용함에 있어 “회사”와 “회원”간에 제반사항을 규정함을 목적으로 합니다.
+</div>
+<div class="small_txt2">제 2 조 (정의)</div>
+<div class="small_txt3">
+① “회원”이라 함은 “서비스”를 이용하기 위해 이 약관에 따라 “회사”와 이용계약을 쳬결하고, “회사”가 제공하는 “서비스”를 이용하는 고객을 말합니다.</div>
+<div class="small_txt2">제 3 조 (준용)</div>
+<div class="small_txt3">
+본 약관에 명시되지 않은 사항은 회사의 웹사이트 내에 게시된 내용 또는 전기통신기본법, 전기통신사업법 및 기타 관련법령에 따릅니다.
+</div>
+<div class="small_txt2">제 4 조 (약관의 명시 및 개정)</div>
+<div class="small_txt3">
+1. 본 약관은 회사의 웹사이트 내에 게시 또는 기타의 방법으로 회원에게 공지합니다. </br>
+2. 회사는 필요에 따라 이 약관을 개정할 수 있으며, 약관을 개정할 경우에는 적용일자 및 개정사유를 명시하여 제1항의 방식에 따라 그 개정약관을 적용일자 7일 전부터 적용일자 전일까지 공지합니다. 다만, 회원에게 불리하거나 중요한 사항을 변경하는 경우에는 적용일자 30일 이상의 유예기간을 두고 공지하며, 공지 외에 일정기간 회원의 전자우편, 로그인 시 동의창 등의 전자적 수단을 통해 따로 명확히 공지합니다.</br>
+3. 회사가 전 항에 따라 개정약관을 공지 또는 통지하면서 회원에게 개정약관 적용일자 전까지 의사표시를 하지 않으면 개정약관에 동의한 것으로 본다는 뜻을 명확하게 공지 또는 통지하였음에도 회원이 명시적으로 거부의사를 표명하지 아니한 경우 회원이 개정 약관에 동의한 것으로 봅니다.</br>
+4. 회원이 개정약관의 내용에 동의하지 않는 경우 회사는 해당 회원에 대하여 개정약관의 내용을 적용할 수 없으며, 이 경우 회사는 회원과의 이용계약을 해지하거나 회원의 서비스 이용을 제한할 수 있습니다. 또한 회사가 개정약관에 동의하지 않은 회원에게 기존 약관을 적용할 수 없는 특별한 사정이 있는 경우 해당 회원과의 이용계약을 해지할 수 있습니다.
+</div>
+<div class="small_txt2">제 5 조 (서비스의 종류)</div>
+<div class="small_txt3">
+회사가 제공하는 서비스의 종류는 서비스 신청서에 정의한 바에 따릅니다.
+</div>
+<div class="small_txt2">제 6 조 (서비스 이용신청)</div>
+<div class="small_txt3">
+서비스 신청시 약관에 동의하는 경우 서비스를 신청할 수 있습니다. 다음의 경우 약관에 동의한 것으로 간주합니다.</br></br>
+<div class="text_indent">
+가. 서비스의 이용신청은 ID별 한 사이트를 원칙으로 하며, 동일한 ID로 복수의 사이트에 대한 서비스를 받을 경우 별도의 회사의 승인이 있어야 합니다.서비스 이용을 위해 회사에 스크립트 적용을 의뢰할 경우, FTP계정 또는 관리자계정을 알려 줄 의무가 있습니다.</div>
+</div>
+<div class="small_txt2">제 7 조 (서비스 이용계약 성립)</div>
+<div class="small_txt3">
+서비스 이용계약은 회사에서 정한 가입신청양식을 작성하여 회사에 온라인으로 제출한 후, 유료 회원인 경우 서비스 사용요금을 결제하는 것으로써 최종 이루어집니다. 회원의 서비스 이용신청에 회사가 승낙하는 경우 서비스 이용계약이 성립됩니다.
+</div>
+<div class="small_txt2">제 8 조 (서비스 이용계약의 거부 및 해지)</div>
+<div class="small_txt3">
+회원의 귀책사유로 서비스를 사용하지 않을 경우, 서비스 기간에 대하여 유료 회원인 경우 납부한 서비스요금은 환불되지 않습니다. 회사의 귀책사유로 서비스를 중지하게 될 경우, 유료 회원인 경우 남은 서비스기간에 해당하는 서비스요금을 월할 계산하여 환불합니다. (단, 한번이라도 사용한 월은 환불되지 않습니다.) 서비스 약관 등의 변경에 따라 새로운 약관에 동의할 수 없는 경우 서비스의 해지를 신청 할 수 있습니다. 회사는 다음의 경우 서비스의 승낙을 거부, 유보 할 수 있습니다. </br></br>
+<div class="text_indent">
+가. 서비스에 필요한 시설부족 및 관리가 어려운 경우 </br></div>
+<div class="text_indent3">
+나. 국내법에 위반되는 사이트에 본 서비스를 적용하려고 하는 경우 </br></div>
+<div class="text_indent3">
+다. 타 개인 및 단체의 정보를 이용하여 회원정보를 허위 기재한 경우 </br></div>
+<div class="text_indent3">
+라. 본인의 의사와 관계없이 타인에 의해 가입된 경우 </br></div>
+<div class="text_indent3">
+마. 기타 회사가 필요하다고 판단되는 경우 회사는 다음의 경우에 회원의 합의 없이 또는 사전 통보 없이 일방적으로 서비스를 해지 할 수 있습니다. </br></div>
+<div class="text_indent6">
+① 서비스 이용요금 납입책임자가 회사에 납입할 이용요금을 납입하지 아니한 경우 </br></div>
+<div class="text_indent5">
+② 회원의 사이트가 국내법에 위반되어 회사에 피해가 예상되는 경우 </br></div>
+<div class="text_indent5">
+③ 고의적으로 회사의 서비스에 장애를 일으키기 위하여 한 행동으로 판단되는 경우 </br></div>
+<div class="text_indent5">
+④ 본 약관을 위반한 경우 </br></div>
+<div class="text_indent5">
+⑤ 기타 회사가 필요하다고 판단되는 경우 성인사이트 및 도박 게임아이템거래 중개 등 불법사이트에는 적용접수를 받지 않습니다. 발견 즉시 서비스가 중지됩니다. </div>
+<div class="text_indent5">
+한 개 사이트 적용 계약이며, 하나의 계정으로 두 개 이상의 사이트를 운영할 경우 발견 즉시 한 개 사이트의 서비스가 중지됩니다.</div>
+</div>
+<div class="small_txt2">제 9 조 (서비스 개시일)</div>
+<div class="small_txt3">
+서비스 개시일은 회원가 서비스를 신청한 후 유료 회원인 경우 사용요금을 납부하여, 회사가 서비스가 제공 가능하도록 서비스 설정 및 승인을 한 날짜로 합니다.
+</div>
+<div class="small_txt2">제 10 조 (서비스의 이용기간)</div>
+<div class="small_txt3">
+서비스 이용기간은 개시일부터 종료일까지로 합니다. 서비스 이용기간이 종료되는 일자부터 회사는 서비스 제공과 관련된 모든 의무가 소멸됩니다. 무료 회원인 경우 서비스 이용을 즉시 또는 공고 후 중지할 수도 있습니다.
+</div>
+<div class="small_txt2">제 11 조 (서비스의 요금 및 결제)</div>
+<div class="small_txt3">
+서비스의 요금은 서비스 신청서에 따라 책정된 금액을 기술한 내용으로 청구합니다. 입금된 금액은 환불되지 않습니다. 결제는 카드결제와 무통장(가상계좌)으로 하며, PG 결제 대행사를 통하여 결제 받습니다.
+</div>
+<div class="small_txt2">제 12 조 (이용요금의 할인 및 할증)</div>
+<div class="small_txt3">
+유료 회원인 경우 회사는 방침에 따라 이용요금을 일시적으로 할인, 할증 할 수 있습니다.
+</div>
+<div class="small_txt2">제 13 조 (서비스 이용에 의한 산출물 보호 및 보유기간)</div>
+<div class="small_txt3">
+서비스이용에 의한 산출물, 즉 로그분석 결과데이터는 회원의 동의 없이 회사가 제3자에게 제공할 수 없습니다. 서비스이용에 의한 산출물은 회원이 서비스를 사용하는 기간 및 서비스기간 종료 후 1개월간 보관하며, 그 이후로는 회원에게 통보 없이 삭제될 수 있으며, 서비스 이용기간에만 해당 산출물이 생성됩니다. 서비스 이용 중인 경우 부정클릭 메뉴 등의 접속별 (PC)IP 리스트에 대한 자료는 6개월간 보관되며, 그 외 모든 메뉴의 로그분석 데이터와 리포트 정보는 5년간 보관됩니다.
+</div>
+<div class="small_txt2">제 14 조 (회원의 의무)</div>
+<div class="small_txt3">
+회원은 관계 법령 및 약관의 규정에 따라야 합니다. 회원은 회사의 사전 동의 없이 서비스의 재판매 및 영업 등 영리행위를 할 수 없습니다. 회원은 자신의 ID와 비밀번호를 유지 관리할 책임이 있으며, 그 관리 소홀과 부정사용 등으로 인한 모든 결과에 대하여 전적인 책임이 있습니다. 회원은 서비스와 관련하여 아래 사항을 하여서는 안 됩니다. </br></br>
+
+가. 서비스의 내용을 회사의 사전 승낙 없이 타인에게 제공 하거나 변조, 유포시키는 행위 </br>
+나. 서비스의 해킹 또는 컴퓨터 바이러스를 유포하는 행위 </br>
+다. 기타 서비스의 운영에 지장을 주거나 줄 우려가 있는 일체의 행위 </br>
+라. 기타 관계 법령에 위배되는 행위 </br>
+</div>
+<div class="small_txt2">제 15 조 (손해배상)</div>
+<div class="small_txt3">
+회사가 제공하는 서비스와 관련하여 회사의 귀책사유인 경우를 제외하고 회사는 서비스 및 그의 이용으로 발생할 수 있는 회원의 어떠한 피해에 대하여 책임을 지지 않습니다. 회원이 약관의 규정을 위반함으로 인하여 회사의 영업활동에 손해가 발생하게 되는 경우, 해당 회원은 회사에 손해를 배상해야 할 책임이 있습니다. 손해가 다음 각 호에 해당하는 경우에는 손해배상을 아니한다. </br></br>
+<div class="text_indent">
+가. 전시, 사변, 천재지변, 또는 이에 준하는 국가비상사태 등 불가항력적인 경우 </br></div>
+<div class="text_indent3">
+나. 회원의 고의 또는 과실로 인하여 발생한 경우 </br></div>
+<div class="text_indent3">
+다. 전기통신사업법에 의한 타 기간통신사업자가 제공하는 전기통신서비스 장애로 인한 경우</br></div>
+<div class="text_indent3">
+단, 불가항력적인 피해의 경우 공동 책임, 공동대응을 원칙으로 합니다.</div>
+</div>
+
+<div class="small_txt2">제 16 조 (관할법원)</div>
+<div class="small_txt3">
+서비스이용으로 인한 분쟁이 발생된 경우 회사의 본사 소재지 법원을 관할법원으로 합니다.
+</div>
+<div class="small_txt2">부칙</div>
+<div class="small_txt3">
+제 1 조 (시행일)<br>
+
+이 약관은 2024년 01월 09일 부터 적용됩니다.<br>
+---------------------------------------------------<br>
+	(주) 케이웹미디어 Tel : 1800-8314<br>
+---------------------------------------------------<br>
+<br><br><br>
+</div>		
+
+</div><!-- notice_list-->									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				<!-- 내용 종료 -->
+				</div>
+      </div>
+    </div>
+  </div>
+</div>  <!-- plugins:js -->
+  <script src="https://hillsideurbancity.bunyangnara.kr/admin/vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="https://hillsideurbancity.bunyangnara.kr/admin/star-admin2/js/off-canvas.js"></script>
+  <script src="https://hillsideurbancity.bunyangnara.kr/admin/star-admin2/js/hoverable-collapse.js"></script>
+  <script src="https://hillsideurbancity.bunyangnara.kr/admin/star-admin2/js/template.js"></script>
+  <script src="https://hillsideurbancity.bunyangnara.kr/admin/star-admin2/js/settings.js"></script>
+  <script src="https://hillsideurbancity.bunyangnara.kr/admin/star-admin2/js/todolist.js"></script>
+		
+  <!-- endinject -->
+	<script src="https://hillsideurbancity.bunyangnara.kr/admin/js/toastr.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://hillsideurbancity.bunyangnara.kr/admin/js/jquery-confirm.min.js"></script>
+	<script src="https://hillsideurbancity.bunyangnara.kr/admin/js/function.js"></script>
+<script src="https://hillsideurbancity.bunyangnara.kr/admin/js/crypto.js"></script>
+<script>
+//로그인
+function login(){
+	const id = document.getElementById("id").value;
+	const pw = document.getElementById("pw").value;
+
+	if(id == ""){
+		$.alert({content:"아이디를 입력해주세요.", type:'red', onOpen: function() {	$('.jconfirm-buttons button').focus();	}, autoClose: 'ok|3000',
+			onDestroy: function() {	
+				document.getElementById('id').focus();
+			}		
+		});
+		return false;
+	}
+	if(pw == ""){
+		$.alert({content:"비밀번호를 입력해주세요.", type:'red', onOpen: function() {	$('.jconfirm-buttons button').focus();	}, autoClose: 'ok|3000',
+			onDestroy: function() {	
+				document.getElementById('pw').focus();
+			}		
+		});
+		return false;	
+	}
+	document.getElementById("login_form").submit();
+}
+
+//회원가입
+jQuery("#join_btn").on("click", function(){
+	const work = "sign_up";
+	const id = jQuery("#id_val").val();
+	const id_chk = jQuery("#id_chk").val();
+	const pw = jQuery("#pw_val").val();
+	const pw2 = jQuery("#pw2_val").val();
+	const name = jQuery("#name").val();
+	const phone = jQuery("#phone").val();
+	const phone2 = jQuery("#phone2").val();
+	const phone3 = jQuery("#phone3").val();
+
+	var passRule = /^[A-Za-z0-9]{6,12}$/;			
+
+	if(id == ""){
+		$.alert({content:"아이디를 입력해주세요.", type:'red', onOpen: function() {	$('.jconfirm-buttons button').focus();	}, autoClose: 'ok|3000', onDestroy: function() {	
+				document.getElementById('id_val').focus();
+		}	});
+		return false;
+	}else if(id_chk == ""){
+		$.alert({content:"아이디 중복 확인을 해주세요.", type:'red', onOpen: function() {	$('.jconfirm-buttons button').focus();	}, autoClose: 'ok|3000', onDestroy: function() {	
+			jQuery('#id_chk_btn').focus();
+		} });
+		return false;
+	}else if(id_chk != id){
+		$.alert({content:"ID를 변경했다면 다시 아이디 중복 확인을 해주세요.", type:'red', onOpen: function() {	$('.jconfirm-buttons button').focus();	}, autoClose: 'ok|3000', onDestroy: function() {	
+			jQuery('#id_chk_btn').focus();
+		} });
+		return false;
+	}else if(pw == ""){
+		$.alert({content:"비밀번호를 입력해주세요.", type:'red', onOpen: function() {	$('.jconfirm-buttons button').focus();	}, autoClose: 'ok|3000', onDestroy: function() {	
+			jQuery('#pw_val').focus();
+		} });
+		return false;
+	}else if(pw2 == ""){
+		$.alert({content:"비밀번호 확인을 입력해주세요.", type:'red', onOpen: function() {	$('.jconfirm-buttons button').focus();	}, autoClose: 'ok|3000', onDestroy: function() {	
+			jQuery('#pw2_val').focus();
+		} });
+		return false;
+	}else if(pw != pw2){
+		$.alert({content:"비밀번호와 비밀번호 확인은 같어야 합니다.", type:'red', onOpen: function() {	$('.jconfirm-buttons button').focus();	}, autoClose: 'ok|3000', onDestroy: function() {
+			jQuery('#pw_val').focus();
+		} });
+		return false;
+	}else if(name == ""){
+		$.alert({content:"이름을 입력해주세요.", type:'red', onOpen: function() {	$('.jconfirm-buttons button').focus();	}, autoClose: 'ok|3000', onDestroy: function() {
+			jQuery('#name').focus();
+		} });
+		return false;
+	}else if(phone == ""){	
+		$.alert({content:"휴대폰 번호를 입력해주세요.", type:'red', onOpen: function() {	$('.jconfirm-buttons button').focus();	}, autoClose: 'ok|3000', onDestroy: function() {
+			jQuery('#phone').focus();
+		} });
+		return false;
+	}else if(phone2 == ""){	
+		$.alert({content:"휴대폰 앞자리를 입력해주세요.", type:'red', onOpen: function() {	$('.jconfirm-buttons button').focus();	}, autoClose: 'ok|3000', onDestroy: function() {
+			jQuery('#phone2').focus();
+		} });
+		return false;
+	}else if(phone3 == ""){	
+		$.alert({content:"휴대폰 뒷자리를 입력해주세요.", type:'red', onOpen: function() {	$('.jconfirm-buttons button').focus();	}, autoClose: 'ok|3000', onDestroy: function() {
+			jQuery('#phone3').focus();
+		} });
+		return false;
+	}else if($("#agree_chk1").is(":checked") == false) {
+		$.alert({content:"개인정보 처리방침에 동의해주세요.", type:'red', onOpen: function() {	$('.jconfirm-buttons button').focus();	}, autoClose: 'ok|3000', onDestroy: function() {
+		} });
+		return false;
+	}else if($("#agree_chk2").is(":checked") == false) {
+		$.alert({content:"이용약관에 동의해주세요.", type:'red', onOpen: function() {	$('.jconfirm-buttons button').focus();	}, autoClose: 'ok|3000', onDestroy: function() {
+		} });
+		return false;
+	}
+
+	$("#join_form").submit();
+});
+//ID중복확인
+jQuery("#id_chk_btn").on("click",function(){	
+	var work = "id_chk";
+	var id = jQuery("#id_val").val();
+	//var idRule = /^[A-za-z0-9]{5,15}/g;
+	var idRule = /^[A-Za-z0-9]{6,20}$/;
+	var passRule = /^[A-Za-z0-9]{6,12}$/;
+
+	if(id == ""){
+		$.alert({content:"아이디를 입력해주세요.", type:'red', onOpen: function() {	$('.jconfirm-buttons button').focus();	}, autoClose: 'ok|3000', onDestroy: function() {
+			jQuery('#id_val').focus();
+		} });
+		return false;
+	}else if( !idRule.test(id)){
+		$.alert({content:"아이디는 영문자로 시작하는 6~20자 영문자 또는 숫자이어야 합니다.", type:'red', onOpen: function() {	$('.jconfirm-buttons button').focus();	}, autoClose: 'ok|3000', onDestroy: function() {
+			jQuery('#id_val').focus();
+		} });
+		return false;
+	}else{
+		var xhr = new XMLHttpRequest();
+		xhr.open("POST", "./login_reg.php", true);
+		xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
+
+		var data = "id=" + encodeURIComponent(id) + "&work=" + encodeURIComponent(work);
+		xhr.onreadystatechange = function() {
+			if (xhr.readyState === 4) {
+				if (xhr.status === 200) {
+					var response = xhr.responseText;
+					//console.log(response);
+					if (response === "F") {
+						$.alert({content:"사용 가능한 아이디입니다.", type:'blue', onOpen: function() {	$('.jconfirm-buttons button').focus();	}, autoClose: 'ok|3000', onDestroy: function() {
+							document.getElementById("pw_val").focus();
+							document.getElementById("id_chk").value = id;
+						} });
+					}else if (response === "X") {
+						$.alert({content:"특수문자는 사용할수 없습니다!", type:'red', onOpen: function() {	$('.jconfirm-buttons button').focus();	}, autoClose: 'ok|3000', onDestroy: function() {
+							document.getElementById("id_val").value = "";
+							document.getElementById("id_val").focus();
+						} });
+					} else {
+						$.alert({content:"이미 사용 중인 아이디입니다.", type:'red', onOpen: function() {	$('.jconfirm-buttons button').focus();	}, autoClose: 'ok|3000', onDestroy: function() {
+							document.getElementById("id_val").value = "";
+							document.getElementById("id_val").focus();
+						} });
+					}
+				} else {
+					alert("일시적인 오류가 발생하였습니다. 다시 시도해주세요.");
+				}
+			}
+		};
+		xhr.send(data);		
+	}
+});
+
+if($("#work2").val() == "join_success"){
+	$.alert({content:"회원가입이 완료되었습니다. 로그인페이지로 이동합니다.", type:'blue', onOpen: function() {	$('.jconfirm-buttons button').focus();	}, autoClose: 'ok|3000', onDestroy: function() {
+		location.href = './login.html';
+	} });
+}
+
+if($("#work2").val() == "login_success"){
+	$.alert({content:"안전하게 로그인되었습니다.", type:'blue', onOpen: function() {	$('.jconfirm-buttons button').focus();	}, autoClose: 'ok|3000', onDestroy: function() {
+		location.href = './index.html';
+	} });
+}
+
+if($("#work2").val() == "login_error"){
+	$.alert({content:"아이디 또는 비밀번호를 확인해주세요.", type:'red', onOpen: function() {	$('.jconfirm-buttons button').focus();	}, autoClose: 'ok|3000'});
+}
+
+if($("#work2").val() == "logout"){
+	$.alert({content:"이용해 주셔서 감사합니다.", type:'green', onOpen: function() {	$('.jconfirm-buttons button').focus();	}, autoClose: 'ok|3000', onDestroy: function() {
+		location.href = './login.html';
+	} });
+}
+
+//비밀번호 찾기
+function find_passwd(){
+	const id = document.getElementById("id2").value;
+	const phone11 = document.getElementById("phone11").value;
+	const phone22 = document.getElementById("phone22").value;
+	const phone33 = document.getElementById("phone33").value;
+	const work = "find_passwd";
+	if(id == ""){
+		$.alert({content:"아이디를 입력해주세요.", type:'red', onOpen: function() {	$('.jconfirm-buttons button').focus();	}, autoClose: 'ok|3000', onDestroy: function() {
+			document.getElementById("id2").focus();
+		} });
+		return false;
+	}
+	if(phone11 == ""){
+		$.alert({content:"가입시 등록한 핸드폰번호를 입력해주세요.", type:'red', onOpen: function() {	$('.jconfirm-buttons button').focus();	}, autoClose: 'ok|3000', onDestroy: function() {
+			document.getElementById("phone11").focus();
+		} });
+		return false;
+	}
+	if(phone22 == ""){
+		$.alert({content:"가입시 등록한 핸드폰번호를 입력해주세요.", type:'red', onOpen: function() {	$('.jconfirm-buttons button').focus();	}, autoClose: 'ok|3000', onDestroy: function() {
+			document.getElementById("phone22").focus();
+		} });
+		return false;
+	}
+	if(phone33 == ""){
+		$.alert({content:"가입시 등록한 핸드폰번호를 입력해주세요.", type:'red', onOpen: function() {	$('.jconfirm-buttons button').focus();	}, autoClose: 'ok|3000', onDestroy: function() {
+			document.getElementById("phone33").focus();
+		} });
+		return false;
+	}
+
+	var xhr = new XMLHttpRequest();
+	xhr.open("POST", "./login_reg.php", true);
+	xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
+
+	var data = "id=" + encodeURIComponent(id) + "&work=" + encodeURIComponent(work) + "&phone=" + encodeURIComponent(phone);
+	xhr.onreadystatechange = function() {
+		if (xhr.readyState === 4) {
+			if (xhr.status === 200) {
+				var response = xhr.responseText;
+				if (response === "F") {
+					$.alert({content:"아이디 또는 비밀번호를 확인해주세요.", type:'red', onOpen: function() {	$('.jconfirm-buttons button').focus();	}, autoClose: 'ok|3000'});
+				}else{
+					$.alert({content:"등록된 번호로 임시 비밀번호를 발송했습니다.", type:'green', onOpen: function() {	$('.jconfirm-buttons button').focus();	}, autoClose: 'ok|3000'});
+				}	
+			} else {
+				alert("일시적인 오류가 발생하였습니다. 다시 시도해주세요.");
+			}
+		}
+	};
+	xhr.send(data);		
+
+}
+
+//자동로그인 시작
+//암호화 함수
+function encryptAES(message, secretKey) {
+  var encrypted = CryptoJS.AES.encrypt(message, secretKey);
+  return encrypted.toString();
+}
+//복호화 함수
+function decryptAES(encryptedMessage, secretKey) {
+  var decrypted = CryptoJS.AES.decrypt(encryptedMessage, secretKey);
+  return decrypted.toString(CryptoJS.enc.Utf8);
+}
+const secretKey = "flslwl";
+
+setTimeout(function() {
+	const auto_login = getCookie("auto_login");
+	if(auto_login == "Y"){
+		const ids = getCookie("ids");
+		const pws = getCookie("pws");
+		if(ids && pws){
+			const id = decryptAES(ids, secretKey);
+			const pw = decryptAES(pws, secretKey);
+			
+			document.getElementById("id").value = id;
+			document.getElementById("pw").value = pw;
+			document.querySelector("#id + .animated-label").classList.add("animated-label-chk");
+			document.querySelector("#pw + .animated-label").classList.add("animated-label-chk");
+			document.getElementById("auto_login").checked = true;
+			login();
+		}
+	}
+}, 500);
+
+//자동 로그인을 누르면 id오 비밀번호를 7일간 보관
+document.getElementById("auto_login").addEventListener("change", function() {
+  if (document.getElementById("auto_login").checked) {
+		const id = document.getElementById("id").value;	
+		const pw = document.getElementById("pw").value;	
+		let ids = "";
+		let pws = "";
+		if (id !== "") {
+			ids = encryptAES(id, secretKey);	//암호화
+		}
+		if (pw !== "") {
+			pws = encryptAES(pw, secretKey);	//암호화
+		}
+		setCookie("auto_login", 'Y', 7);
+    setCookie("ids", ids, 7);
+		setCookie("pws", pws, 7);
+  } else {
+		deleteCookie("auto_login");
+    deleteCookie("ids");
+		deleteCookie("pws");
+  }
+});
+
+//ID가 없이 자동로그인 클릭했을때를 대비해서 추후에 ID를 추가해줌.
+document.getElementById("id").addEventListener("keyup", function() {
+  if (document.getElementById("auto_login").checked) {
+		const id = document.getElementById("id").value;	
+		let ids = "";
+		if (id !== "") {
+			ids = encryptAES(id, secretKey);	//암호화
+		}
+		setCookie("auto_login", 'Y', 7);
+    setCookie("ids", ids, 7);
+  }
+});
+
+//ID가 없이 자동로그인 클릭했을때를 대비해서 추후에 비밀번호를 추가해줌.
+document.getElementById("pw").addEventListener("keyup", function() {
+  if (document.getElementById("auto_login").checked) {
+		const pw = document.getElementById("pw").value;	
+		let pws = "";
+		if (pw !== "") {
+			pws = encryptAES(pw, secretKey);	//암호화
+		}
+		setCookie("auto_login", 'Y', 7);
+    setCookie("pws", pws, 7);
+  }
+});
+
+/*
+var message = "hyunjk11";
+var secretKey = "flslwl";
+
+var encryptedMessage = encryptAES(message, secretKey);
+console.log("암호화된 메시지:", encryptedMessage);
+
+var decryptedMessage = decryptAES(encryptedMessage, secretKey);
+console.log("복호화된 메시지:", decryptedMessage);
+
+*/
+//자동 로그인 종료
+
+//아이디 저장 시작
+setTimeout(function() {
+  var key = getCookie("key");
+  document.getElementById("id").value = key;
+  if (document.getElementById("id").value !== "") {
+    document.getElementById("pw").focus();
+    document.querySelector("#id + .animated-label").classList.add("animated-label-chk");
+  } else {
+    document.getElementById("id").focus();
+  }
+  if (document.getElementById("id").value !== "") {
+    document.getElementById("id_save").checked = true;
+  }
+}, 300);
+//ID저장을 누르면 7일동안 쿠키를 보관함.
+document.getElementById("id_save").addEventListener("change", function() {
+  if (document.getElementById("id_save").checked) {
+    setCookie("key", document.getElementById("id").value, 7);
+  } else {
+    deleteCookie("key");
+  }
+});
+//ID가 없이 아이디 저장을 클릭했을때를 대비해서 추후에 ID를 추가해줌.
+document.getElementById("id").addEventListener("keyup", function() {
+  if (document.getElementById("id_save").checked) {
+    setCookie("key", document.getElementById("id").value, 7);
+  }
+});
+//아이디 저장 종료
+//엔터 로그인
+document.getElementById("pw").addEventListener("keydown", function (event) {
+  if (event.keyCode === 13) { // 키 코드 13은 엔터 키를 나타냅니다.
+    login();
+  }
+});
+
+//쿠키영역
+function setCookie(cookieName, value, exdays){
+		var exdate = new Date();
+		exdate.setDate(exdate.getDate() + exdays);
+		var cookieValue = escape(value) + ((exdays==null) ? "" : "; expires=" + exdate.toGMTString()) + "; path=/";
+		document.cookie = cookieName + "=" + cookieValue;
+}
+function deleteCookie(cookieName){
+    var expireDate = new Date();
+    expireDate.setDate(expireDate.getDate() - 1);
+    var cookieValue = cookieName + "=; expires=" + expireDate.toGMTString() + "; path=/";
+    document.cookie = cookieValue;
+}
+function getCookie(cookieName) {
+		cookieName = cookieName + '=';
+		var cookieData = document.cookie;
+		var start = cookieData.indexOf(cookieName);
+		var cookieValue = '';
+		if(start != -1){
+				start += cookieName.length;
+				var end = cookieData.indexOf(';', start);
+				if(end == -1)end = cookieData.length;
+				cookieValue = cookieData.substring(start, end);
+		}
+		return unescape(cookieValue);
+}
+
+//포커스가 떠난후 라벨이 아래로 내려오는걸 방지하기 위해서 추가함.
+var formControls = document.querySelectorAll(".form-control");
+
+formControls.forEach(function(element) {
+  element.addEventListener("focusout", function() {
+    if (this.value !== "") {
+      this.nextElementSibling.classList.add("animated-label-chk");
+      this.classList.add("form-control-chk");
+    } else {
+      this.nextElementSibling.classList.remove("animated-label-chk");
+      this.classList.remove("form-control-chk");
+    }
+  });
+});
+</script>
+</body>
+
+</html>

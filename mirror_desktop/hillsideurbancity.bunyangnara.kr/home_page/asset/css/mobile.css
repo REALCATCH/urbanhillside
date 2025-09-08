@@ -1,0 +1,57 @@
+/* 이미지반응형 yun 2025-01-24 */
+/* max-width:800px */
+[class*=pc] img.pc {display:block;}
+[class*=pc] img.mobile {display:none;}
+[class*=mobile] img.pc {display:none;}
+[class*=mobile] img.mobile {display:block;}
+[class*=pc] video.pc {display:block; width: inherit;}
+[class*=pc] video.mobile {display:none;}
+[class*=mobile] video.pc {display:none;}
+[class*=mobile] video.mobile {display:block;}
+/* [class*=pc].moview {display:none;}
+[class*=mobile].moview {display:block;} */
+[class*=pc] .main-visual .swiper-slide .bg.pc {display:block;}
+[class*=pc] .main-visual .swiper-slide .bg.mobile {display:none;}
+
+[class*=mobile] .moview {display: flex; align-items: center; justify-content: center; gap: 1rem; flex-direction: column;}
+
+
+/* [class*=pc] .main-unit .unit-slide {display:block;}
+[class*=mobile] .main-unit .unit-slide {display:none;} */
+/* [class*=mobile] .main-unit .unit-slide.pc {display:none;} */
+
+/* 모바일이미지가 있을경우 슬라이드숨기기 */
+[class*=mobile] .main-unit .unit-slide.pc {display:none;}
+[class*=mobile] .main-life .life-slide.pc {display:none;}
+
+/* 슬라이드네비높이조정 */	
+[class*=mobile] .main-life .life-slide .navigator,
+[class*=mobile] .main-unit .unit-slide .navigator {height: 3rem;}
+
+
+/* [class*=pc] .main-life .life-slide {display:none;}
+[class*=mobile] .main-life .life-slide {display:block;}
+[class*=mobile] .main-life .life-slide.pc {display:none;} */
+
+/* [class*=mobile] .main-life .life-slide .navigator {display:none;} */
+
+/* [class*=pc] .main-life .life-slide {display:none;}
+[class*=mobile] .main-life .life-slide {display:block;} */
+
+[class*=pc] .section.banner {display:none;}
+[class*=mobile] [class*=section] {padding: 3rem var(--common-padding);}
+[class*=mobile] [class*=section].visual-single {padding:0;} /* yun 2025-04-09 */
+[class*=mobile] [class*=section].visual-video {padding:0; margin-top: var(--header-height);}
+[class*=mobile] .section.banner {padding:1rem var(--common-padding);}
+[class*=mobile] .section.banner {padding:0;}
+/* [class*=mobile] .main-banner .banner-slide .navigator {display:none;}
+[class*=mobile] .main-banner .title {display:none;} */
+[class*=pc] .customer .space.pc {display:block;}
+[class*=mobile] .customer .space.pc {display:none !important;}
+
+[class*=mobile] [class*=section].customer {margin-top:0 !important;}
+[class*=mobile] .checklist {display:block;}
+
+/* 메인비주얼 - 슬라이드 오리지날이미지 오토플레이 */
+/* [class*=mobile] .autoplay img.mobile {display:block;}
+[class*=mobile] .autoplay img.pc {display:none;} */

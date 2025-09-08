@@ -1,0 +1,14 @@
+# Ignore mirrored mobile (we deploy only responsive desktop)
+mirror_mobile/
+
+# Large capture archives
+**/*.warc.gz
+
+# OS cruft
+.DS_Store
+Thumbs.db
+
+# Env / deps (future-proof)
+node_modules/
+.env
+.venv/

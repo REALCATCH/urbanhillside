@@ -1,0 +1,12 @@
+# Ignore non-site artifacts and backups
+mirror_mobile/
+**/*.warc.gz
+**/*backup*/
+**/backup_*/
+**/.DS_Store
+**/Thumbs.db
+
+# Node/venv caches just in case
+node_modules/
+.env
+.venv/

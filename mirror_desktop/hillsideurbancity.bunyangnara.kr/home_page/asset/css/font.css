@@ -1,0 +1,675 @@
+@charset "utf-8";
+/*********************************************
+* fonts 2025-04-10 ~ yun 
+
+NanumGothic
+NanumBarunGothic https://hangeul.naver.com/font
+NanumMyeongjo
+NanumSquare
+NanumSquareNeo
+GmarketSans 지마켓산스
+NotoSansKR 본고딕
+NotoSerifKR 본명조
+
+pretendard
+SpoqaHanSansNeo
+MaruBuri 마루부리
+Cafe24Oneprettynight 카페24고운밤
+AstaSans 아스타산스(산돌)
+GyeonggiBatang 경기천년바탕
+Giants-Inline 자이언츠
+Giants-Bold
+Giants-Regular
+
+SeoulHangangM 서울한강체
+SeoulNamsanM 서울남산체
+
+
+카페24 아네모네/카페24 아네모네 에어 Cafe24Oh
+카페24 심플해
+
+
+
+
+:root{
+--GmarketSans: 'GmarketSans', "나눔고딕", NanumGothic, "Nanum Gothic", "돋움", Dotum, Apple Gothic, Tahoma, Verdana, sans-serif;
+--NanumMyeongjo: 'NanumMyeongjo', "나눔고딕", NanumGothic, "Nanum Gothic", "돋움", Dotum, Apple Gothic, Tahoma, Verdana, sans-serif;
+--NanumSquare: 'NanumSquare', "나눔고딕", NanumGothic, "Nanum Gothic", "돋움", Dotum, Apple Gothic, Tahoma, Verdana, sans-serif;
+--NanumSquareNeo: 'NanumSquareNeo', "나눔고딕", NanumGothic, "Nanum Gothic", "돋움", Dotum, Apple Gothic, Tahoma, Verdana, sans-serif;
+--NotoSansKR: 'NotoSansKR', "나눔고딕", NanumGothic, "Nanum Gothic", "돋움", Dotum, Apple Gothic, Tahoma, Verdana, sans-serif;
+--NanumMyeongjo: 'NanumMyeongjo', "나눔고딕", NanumGothic, "Nanum Gothic", "돋움", Dotum, Apple Gothic, Tahoma, Verdana, sans-serif;
+--pretendard: 'pretendard', "나눔고딕", NanumGothic, "Nanum Gothic", "돋움", Dotum, Apple Gothic, Tahoma, Verdana, sans-serif;
+--SpoqaHanSansNeo: 'SpoqaHanSansNeo', "나눔고딕", NanumGothic, "Nanum Gothic", "돋움", Dotum, Apple Gothic, Tahoma, Verdana, sans-serif;
+--MaruBuri: 'MaruBuri', "나눔고딕", NanumGothic, "Nanum Gothic", "돋움", Dotum, Apple Gothic, Tahoma, Verdana, sans-serif;
+--Cafe24Oneprettynight: 'Cafe24Oneprettynight', "나눔고딕", NanumGothic, "Nanum Gothic", "돋움", Dotum, Apple Gothic, Tahoma, Verdana, sans-serif;
+--AstaSans: 'AstaSans', "나눔고딕", NanumGothic, "Nanum Gothic", "돋움", Dotum, Apple Gothic, Tahoma, Verdana, sans-serif;
+--NanumBarunGothic: 'NanumBarunGothic', "나눔고딕", NanumGothic, "Nanum Gothic", "돋움", Dotum, Apple Gothic, Tahoma, Verdana, sans-serif;
+--awesome: 'Font Awesome 6 Free', 'Font Awesome 6 Brands';
+}
+
+
+**********************************************/
+
+/*@import url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');*/
+/* NanumGothic */
+@font-face {
+ font-family: 'NanumGothic';
+ font-style: normal;
+ font-weight: 400;
+ src: url('fonts/NanumGothicRegular.eot');
+ src: url('fonts/NanumGothicRegular.eot%3F') format('embedded-opentype'),
+ url('fonts/NanumGothicRegular.woff') format('woff'),
+ url('fonts/NanumGothicRegular.ttf') format('truetype');
+}
+@font-face {
+ font-family: 'NanumGothic';
+ font-style: normal;
+ font-weight: 700;
+ src: url('fonts/NanumGothicBold.eot');
+ src: url('fonts/NanumGothicBold.eot%3F') format('embedded-opentype'),
+ url('fonts/NanumGothicBold.woff') format('woff'),
+ url('fonts/NanumGothicBold.ttf') format('truetype');
+}
+@font-face {
+ font-family: 'NanumGothic';
+ font-style: normal;
+ font-weight: 800;
+ src: url('fonts/NanumGothicExtraBold.eot');
+ src: url('fonts/NanumGothicExtraBold.eot%3F') format('embedded-opentype'),
+ url('fonts/NanumGothicExtraBold.woff') format('woff'),
+ url('fonts/NanumGothicExtraBold.ttf') format('truetype');
+}
+
+
+
+/* NanumBarunGothic */
+@font-face {
+ font-family: 'NanumBarunGothic';
+ font-style: normal;
+ font-weight: 400;
+ src: url('fonts/NanumBarunGothicWeb.eot');
+ src: url('fonts/NanumBarunGothicWeb.eot%3F') format('embedded-opentype'),
+ url('fonts/NanumBarunGothicWeb.woff') format('woff'),
+ url('fonts/NanumBarunGothicWeb.ttf') format('truetype');
+}
+@font-face {
+ font-family: 'NanumBarunGothic';
+ font-style: normal;
+ font-weight: 700;
+ src: url('fonts/NanumBarunGothicWebBold.eot');
+ src: url('fonts/NanumBarunGothicWebBold.eot%3F') format('embedded-opentype'),
+ url('fonts/NanumBarunGothicWebBold.woff') format('woff'),
+ url('fonts/NanumBarunGothicWebBold.ttf') format('truetype')
+}
+@font-face {
+ font-family: 'NanumBarunGothic';
+ font-style: normal;
+ font-weight: 300;
+ src: url('fonts/NanumBarunGothicWebLight.eot');
+ src: url('fonts/NanumBarunGothicWebLight.eot%3F') format('embedded-opentype'),
+ url('fonts/NanumBarunGothicWebLight.woff') format('woff'),
+ url('fonts/NanumBarunGothicWebLight.ttf') format('truetype');
+}
+.nanumbarungothic * {
+ font-family: 'NanumBarunGothic', sans-serif;
+}
+
+
+
+
+
+/* NanumMyeongjo */
+@font-face {
+  font-family: 'NanumMyeongjo';
+  font-weight: 400;
+  font-style: normal;
+  src: url('fonts/NanumMyeongjo.eot');
+  src: url('fonts/NanumMyeongjo.eot%3F') format("embedded-opentype"),
+  url('fonts/NanumMyeongjo.woff') format("woff"),
+  url('fonts/NanumMyeongjo.ttf') format("truetype");
+}
+@font-face {
+  font-family: 'NanumMyeongjo';
+  font-weight: 600;
+  font-style: normal;
+  src: url('fonts/NanumMyeongjoBold.eot');
+  src: url('fonts/NanumMyeongjoBold.eot%3F') format("embedded-opentype"),
+  url('fonts/NanumMyeongjoBold.woff') format("woff"),
+  url('fonts/NanumMyeongjoBold.ttf') format("truetype");
+}
+@font-face {
+  font-family: 'NanumMyeongjo';
+  font-weight: 800;
+  font-style: normal;
+  src: url('fonts/NanumMyeongjoExtraBold.eot');
+  src: url('fonts/NanumMyeongjoExtraBold.eot%3F') format("embedded-opentype"),
+  url('fonts/NanumMyeongjoExtraBold.woff') format("woff"),
+  url('fonts/NanumMyeongjoExtraBold.ttf') format("truetype");
+}
+
+/* NanumSquare */
+@font-face {
+ font-family: 'NanumSquare';
+ font-weight: 300;
+ src: url(fonts/NanumSquareL.eot.html);
+ src: url(fonts/NanumSquareL.eot%3F.html) format('embedded-opentype'),
+      url(fonts/NanumSquareL.woff2.html) format('woff2'),
+      url(fonts/NanumSquareL.woff) format('woff'),
+      url(fonts/NanumSquareL.ttf.html) format('truetype');
+}
+@font-face {  
+ font-family: 'NanumSquare';
+ font-weight: 400;
+ src: url(fonts/NanumSquareR.eot.html);
+ src: url(fonts/NanumSquareR.eot%3F.html) format('embedded-opentype'),
+      url(fonts/NanumSquareR.woff2) format('woff2'),
+      url(fonts/NanumSquareR.woff.html) format('woff'),
+      url(fonts/NanumSquareR.ttf.html) format('truetype');
+}
+@font-face {
+ font-family: 'NanumSquare';
+ font-weight: 700;
+ src: url(fonts/NanumSquareB.eot.html);
+ src:  url(fonts/NanumSquareB.eot%3F.html) format('embedded-opentype'),
+      url(fonts/NanumSquareB.woff2.html) format('woff2'),
+      url(fonts/NanumSquareB.woff.html) format('woff'),
+      url(fonts/NanumSquareB.ttf.html) format('truetype');
+}
+@font-face {
+ font-family: 'NanumSquare';
+ font-weight: 800;
+ src: url(fonts/NanumSquareEB.eot.html);
+ src: url(fonts/NanumSquareEB.eot%3F.html) format('embedded-opentype'),
+      url(fonts/NanumSquareEB.woff2.html) format('woff2'),
+      url(fonts/NanumSquareEB.woff.html) format('woff'),
+      url(fonts/NanumSquareEB.ttf.html) format('truetype');
+}
+
+
+
+
+
+/* NanumSquareNeo */
+@font-face {
+  font-family: 'NanumSquareNeo';
+  font-weight: 100;
+  src: url('fonts/NanumSquareNeoTTF-aLt.eot');
+  src: url('fonts/NanumSquareNeoTTF-aLt.eot%3F') format("embedded-opentype"),
+  url('fonts/NanumSquareNeoTTF-aLt.woff') format("woff"),
+  url('fonts/NanumSquareNeoTTF-aLt.ttf') format("truetype");
+}
+@font-face {
+  font-family: 'NanumSquareNeo';
+  font-weight: 200;
+  src: url('fonts/NanumSquareNeoTTF-bRg.eot');
+  src: url('fonts/NanumSquareNeoTTF-bRg.eot%3F') format("embedded-opentype"),
+  url('fonts/NanumSquareNeoTTF-bRg.woff') format("woff"),
+  url('fonts/NanumSquareNeoTTF-bRg.ttf') format("truetype");
+}
+@font-face {
+  font-family: 'NanumSquareNeo';
+  font-weight: 400;
+  src: url('fonts/NanumSquareNeoTTF-cBd.eot');
+  src: url('fonts/NanumSquareNeoTTF-cBd.eot%3F') format("embedded-opentype"),
+  url('fonts/NanumSquareNeoTTF-cBd.woff') format("woff"),
+  url('fonts/NanumSquareNeoTTF-cBd.ttf') format("truetype");
+}
+@font-face {
+  font-family: 'NanumSquareNeo';
+  font-weight: 500;
+  src: url('fonts/NanumSquareNeoTTF-dEb.eot');
+  src: url('fonts/NanumSquareNeoTTF-dEb.eot%3F') format("embedded-opentype"),
+  url('fonts/NanumSquareNeoTTF-dEb.woff') format("woff"),
+  url('fonts/NanumSquareNeoTTF-dEb.ttf') format("truetype");
+}
+@font-face {
+  font-family: 'NanumSquareNeo';
+  font-weight: 600;
+  src: url('fonts/NanumSquareNeoTTF-eHv.eot');
+  src: url('fonts/NanumSquareNeoTTF-eHv.eot%3F') format("embedded-opentype"),
+  url('fonts/NanumSquareNeoTTF-eHv.woff') format("woff"),
+  url('fonts/NanumSquareNeoTTF-eHv.ttf') format("truetype");
+}
+@font-face {
+  font-family: 'NanumSquareNeoVariable';
+  src: url('fonts/NanumSquareNeo-Variable.eot');
+  src: url('fonts/NanumSquareNeo-Variable.eot%3F') format("embedded-opentype"),
+  url('fonts/NanumSquareNeo-Variable.woff') format("woff"),
+  url('fonts/NanumSquareNeo-Variable.ttf') format("truetype");
+}
+
+
+
+
+
+
+/* GmarketSans */
+@font-face {
+  font-family: 'GmarketSans';
+  src: url('fonts/GmarketSansLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  /* font-display: swap; */
+}
+@font-face {
+  font-family: 'GmarketSans';
+  src: url('fonts/GmarketSansMedium.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  /* font-display: swap; */
+}
+@font-face {
+  font-family: 'GmarketSans';
+  src: url('fonts/GmarketSansBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  /* font-display: swap; */
+}
+
+
+
+
+/* NotoSansKR */
+@font-face {
+	font-family: 'NotoSansKR';
+	font-weight: 100;
+	src: url('fonts/NotoSansKR-Thin.woff2') format('woff2'),
+	url('fonts/NotoSansKR-Thin.woff') format('woff'),
+	url('fonts/NotoSansKR-Thin.otf') format('opentype');
+	/* font-display: swap; */       
+}
+@font-face {
+	font-family: 'NotoSansKR';
+	font-weight: 200;
+	src: url('fonts/NotoSansKR-Light.woff2') format('woff2'),
+	url('fonts/NotoSansKR-Light.woff') format('woff'),
+	url('fonts/NotoSansKR-Light.otf') format('opentype');
+	/* font-display: swap; */
+}
+@font-face {
+  font-family: 'NotoSansKR';
+  font-weight: 300;
+  src: url('fonts/NotoSansKR-Regular.woff2') format('woff2'),
+  url('fonts/NotoSansKR-Regular.woff') format('woff'),
+  url('fonts/NotoSansKR-Regular.otf') format('opentype');
+  /* font-display: swap; */
+}
+@font-face {
+  font-family: 'NotoSansKR';
+  font-weight: 400;
+  src: url('fonts/NotoSansKR-Medium.woff2') format('woff2'),
+  url('fonts/NotoSansKR-Medium.woff') format('woff'),
+  url('fonts/NotoSansKR-Medium.otf') format('opentype');
+  /* font-display: swap; */
+}
+@font-face {
+  font-family: 'NotoSansKR';
+  font-weight: 500;
+  src: url('fonts/NotoSansKR-Bold.woff2') format('woff2'),
+  url('fonts/NotoSansKR-Bold.woff') format('woff'),
+  url('fonts/NotoSansKR-Bold.otf') format('opentype');
+  /* font-display: swap; */
+}
+@font-face {
+  font-family: 'NotoSansKR';
+  font-weight: 900;
+  src: url('fonts/NotoSansKR-Black.woff2') format('woff2'),
+  url('fonts/NotoSansKR-Black.woff') format('woff'),
+  url('fonts/NotoSansKR-Black.otf') format('opentype');
+  /* font-display: swap; */
+}
+
+/* NotoSerifKR */
+@font-face {
+    font-family: 'NotoSerifKR';
+    src: url('fonts/NotoSerifKR.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+/* pretendard */
+@font-face {
+  font-family: 'pretendard';
+  font-weight: 100;
+  font-style: normal;
+  src: url('fonts/Pretendard-Thin.eot.html');
+  src: url('fonts/Pretendard-Thin.eot%3F.html') format('embedded-opentype'),
+  url('fonts/Pretendard-Thin.woff2') format('woff2'),
+  url('fonts/Pretendard-Thin.woff') format('woff'),
+  url('fonts/Pretendard-Thin.ttf') format("truetype");
+  /* font-display: swap; */
+}
+@font-face {
+  font-family: 'pretendard';
+  font-weight: 200;
+  font-style: normal;
+  src: url('fonts/Pretendard-ExtraLight.eot.html');
+  src: url('fonts/Pretendard-ExtraLight.eot%3F.html') format('embedded-opentype'),
+  url('fonts/Pretendard-ExtraLight.woff2') format('woff2'),
+  url('fonts/Pretendard-ExtraLight.woff') format('woff'),
+  url('fonts/Pretendard-ExtraLight.ttf') format("truetype");
+  /* font-display: swap; */
+}
+@font-face {
+  font-family: 'pretendard';
+  font-weight: 300;
+  font-style: normal;
+  src: url('fonts/Pretendard-Light.eot.html');
+  src: url('fonts/Pretendard-Light.eot%3F.html') format('embedded-opentype'),
+  url('fonts/Pretendard-Light.woff2') format('woff2'),
+  url('fonts/Pretendard-Light.woff') format('woff'),
+  url('fonts/Pretendard-Light.ttf') format("truetype");
+  /* font-display: swap; */
+}
+@font-face {
+  font-family: 'pretendard';
+  font-weight: 400;
+  font-style: normal;
+  src: url('fonts/Pretendard-Regular.eot.html');
+  src: url('fonts/Pretendard-Regular.eot%3F.html') format('embedded-opentype'),
+  url('fonts/Pretendard-Regular.woff2') format('woff2'),
+  url('fonts/Pretendard-Regular.woff') format('woff'),
+  url('fonts/Pretendard-Regular.ttf') format("truetype");
+  /* font-display: swap; */
+}
+@font-face {
+  font-family: 'pretendard';
+  font-weight: 500;
+  font-style: normal;
+  src: url('fonts/Pretendard-Medium.eot.html');
+  src: url('fonts/Pretendard-Medium.eot%3F.html') format('embedded-opentype'),
+  url('fonts/Pretendard-Medium.woff2') format('woff2'),
+  url('fonts/Pretendard-Medium.woff') format('woff'),
+  url('fonts/Pretendard-Medium.ttf') format("truetype");
+  /* font-display: swap; */
+}
+@font-face {
+  font-family: 'pretendard';
+  font-weight: 600;
+  font-style: normal;
+  src: url('fonts/Pretendard-SemiBold.eot.html');
+  src: url('fonts/Pretendard-SemiBold.eot%3F.html') format('embedded-opentype'),
+  url('fonts/Pretendard-SemiBold.woff2') format('woff2'),
+  url('fonts/Pretendard-SemiBold.woff') format('woff'),
+  url('fonts/Pretendard-SemiBold.ttf') format("truetype");
+  /* font-display: swap; */
+}
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 700;
+  font-style: normal;
+  src: url('fonts/Pretendard-Bold.eot.html');
+  src: url('fonts/Pretendard-Bold.eot%3F.html') format('embedded-opentype'),
+  url('fonts/Pretendard-Bold.woff2') format('woff2'),
+  url('fonts/Pretendard-Bold.woff') format('woff'),
+  url('fonts/Pretendard-Bold.ttf') format("truetype");
+  /* font-display: swap; */
+}
+@font-face {
+  font-family: 'pretendard';
+  font-weight: 800;
+  font-style: normal;
+  src: url('fonts/Pretendard-ExtraBold.eot.html');
+  src: url('fonts/Pretendard-ExtraBold.eot%3F.html') format('embedded-opentype'),
+  url('fonts/Pretendard-ExtraBold.woff2') format('woff2'),
+  url('fonts/Pretendard-ExtraBold.woff') format('woff'),
+  url('fonts/Pretendard-ExtraBold.ttf') format("truetype");
+  /* font-display: swap; */
+}
+@font-face {
+  font-family: 'pretendard';
+  font-weight: 900;
+  font-style: normal;
+  src: url('fonts/Pretendard-Black.eot.html');
+  src: url('fonts/Pretendard-Black.eot%3F.html') format('embedded-opentype'),
+  url('fonts/Pretendard-Black.woff2') format('woff2'),
+  url('fonts/Pretendard-Black.woff') format('woff'),
+  url('fonts/Pretendard-Black.ttf') format("truetype");
+  /* font-display: swap; */
+}
+
+
+
+/* SpoqaHanSansNeo */
+@font-face {
+  font-family: 'SpoqaHanSansNeo';
+  font-weight: 100;
+  /* font-display: swap; */
+  src: local('SpoqaHanSansNeo Thin'),
+  url('fonts/SpoqaHanSansNeo-Thin.woff2.html') format('woff2'),
+  url('fonts/SpoqaHanSansNeo-Thin.woff.html') format('woff'),
+  url('fonts/SpoqaHanSansNeo-Thin.ttf.html') format('truetype');
+}
+@font-face {
+  font-family: 'SpoqaHanSansNeo';
+  font-weight: 200;
+  /* font-display: swap; */
+  src: local('SpoqaHanSansNeo Light'),
+  url('fonts/SpoqaHanSansNeo-Light.woff2.html') format('woff2'),
+  url('fonts/SpoqaHanSansNeo-Light.woff.html') format('woff'),
+  url('fonts/SpoqaHanSansNeo-Light.ttf.html') format('truetype');
+}
+@font-face {
+  font-family: 'SpoqaHanSansNeo';
+  font-weight: 300;
+  /* font-display: swap; */
+  src: local('SpoqaHanSansNeo Regular'),
+  url('fonts/SpoqaHanSansNeo-Regular.woff2.html') format('woff2'),
+  url('fonts/SpoqaHanSansNeo-Regular.woff.html') format('woff'),
+  url('fonts/SpoqaHanSansNeo-Regular.ttf.html') format('truetype');
+}
+@font-face {
+  font-family: 'SpoqaHanSansNeo';
+  font-weight: 400;
+  /* font-display: swap; */
+  src: local('SpoqaHanSansNeo Medium'),
+  url('fonts/SpoqaHanSansNeo-Medium.woff2.html') format('woff2'),
+  url('fonts/SpoqaHanSansNeo-Medium.woff.html') format('woff'),
+  url('fonts/SpoqaHanSansNeo-Medium.ttf.html') format('truetype');
+}
+@font-face {
+  font-family: 'SpoqaHanSansNeo';
+  font-weight: 500;
+  /* font-display: swap; */
+  src: local('SpoqaHanSansNeo Bold'),
+  url('fonts/SpoqaHanSansNeo-Bold.woff2.html') format('woff2'),
+  url('fonts/SpoqaHanSansNeo-Bold.woff.html') format('woff'),
+  url('fonts/SpoqaHanSansNeo-Bold.ttf.html') format('truetype');
+}
+
+
+
+/* MaruBuri */
+@font-face {
+    font-family: 'MaruBuri';
+    font-weight: 700;
+    src: url(fonts/MaruBuri-Bold.eot.html);
+    src: url(fonts/MaruBuri-Bold.eot%3F.html) format("embedded-opentype"),
+    url(fonts/MaruBuri-Bold.woff2.html) format("woff2"),
+    url(fonts/MaruBuri-Bold.woff.html) format("woff"),
+    url(fonts/MaruBuri-Bold.ttf) format("truetype");
+}
+@font-face {
+    font-family: 'MaruBuri';
+    font-weight: 600;
+    src: url(fonts/MaruBuri-SemiBold.eot.html);
+    src: url(fonts/MaruBuri-SemiBold.eot%3F.html) format("embedded-opentype"),
+    url(fonts/MaruBuri-SemiBold.woff2.html) format("woff2"),
+    url(fonts/MaruBuri-SemiBold.woff.html) format("woff"),
+    url(fonts/MaruBuri-SemiBold.ttf) format("truetype");
+}
+@font-face {
+    font-family: 'MaruBuri';
+    font-weight: 400;
+    src: url(fonts/MaruBuri-Regular.eot.html);
+    src: url(fonts/MaruBuri-Regular.eot%3F.html) format("embedded-opentype"),
+    url(fonts/MaruBuri-Regular.woff2.html) format("woff2"),
+    url(fonts/MaruBuri-Regular.woff.html) format("woff"),
+    url(fonts/MaruBuri-Regular.ttf) format("truetype");
+}
+@font-face {
+    font-family: 'MaruBuri';
+    font-weight: 300;
+    src: url(fonts/MaruBuri-Light.eot.html);
+    src: url(fonts/MaruBuri-Light.eot%3F.html) format("embedded-opentype"),
+    url(fonts/MaruBuri-Light.woff2.html) format("woff2"),
+    url(fonts/MaruBuri-Light.woff.html) format("woff"),
+    url(fonts/MaruBuri-Light.ttf) format("truetype");
+}
+@font-face {
+    font-family: 'MaruBuri';
+    font-weight: 200;
+    src: url(fonts/MaruBuri-ExtraLight.eot.html);
+    src: url(fonts/MaruBuri-ExtraLight.eot%3F.html) format("embedded-opentype"),
+    url(fonts/MaruBuri-ExtraLight.woff2.html) format("woff2"),
+    url(fonts/MaruBuri-ExtraLight.woff.html) format("woff"),
+    url(fonts/MaruBuri-ExtraLight.ttf) format("truetype");
+}
+
+
+
+/* Cafe24Oneprettynight */
+@font-face {
+    font-family: 'Cafe24Oneprettynight';
+    src: url('fonts/Cafe24Oneprettynight.woff') format('woff'),
+    url('fonts/Cafe24Oneprettynight.woff2') format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+
+/* AstaSans */
+@font-face {
+    font-family: 'AstaSans';
+    font-weight: 300;
+    src: url('fonts/AstaSans-Light.woff2') format('woff2'),
+    url('fonts/AstaSans-Light.woff') format('woff'),
+    url('fonts/AstaSans-Light.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'AstaSans';
+    font-weight: 400;
+    src: url('fonts/AstaSans-Regular.woff2') format('woff2'),
+    url('fonts/AstaSans-Regular.woff') format('woff'),
+    url('fonts/AstaSans-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'AstaSans';
+    font-weight: 500;
+    src: url('fonts/AstaSans-Medium.woff2') format('woff2'),
+    url('fonts/AstaSans-Medium.woff') format('woff'),
+    url('fonts/AstaSans-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'AstaSans';
+    font-weight: 600;
+    src: url('fonts/AstaSans-SemiBold.woff2') format('woff2'),
+    url('fonts/AstaSans-SemiBold.woff') format('woff'),
+    url('fonts/AstaSans-SemiBold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'AstaSans';
+    font-weight: 700;
+    src: url('fonts/AstaSans-Bold.woff2') format('woff2'),
+    url('fonts/AstaSans-Bold.woff') format('woff'),
+    url('fonts/AstaSans-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'AstaSans';
+    font-weight: 800;
+    src: url('fonts/AstaSans-ExtraBold.woff2') format('woff2'),
+    url('fonts/AstaSans-ExtraBold.woff') format('woff'),
+    url('fonts/AstaSans-ExtraBold.ttf') format('truetype');
+}
+
+
+
+
+/* GyeonggiBatang */
+@font-face {
+    font-family: 'GyeonggiBatang';
+    src: url('fonts/GyeonggiBatang_Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GyeonggiBatang';
+    src: url('fonts/GyeonggiBatang_Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+
+/* Giants-Inline */
+@font-face {
+    font-family: 'Giants-Inline';
+    src: url('fonts/Giants-Inline.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Giants-Regular */
+@font-face {
+    font-family: 'Giants-Regular';
+    src: url('fonts/Giants-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+/* Giants-Bold */
+@font-face {
+    font-family: 'Giants-Bold';
+    src: url('fonts/Giants-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+
+
+
+/* 서울한강체 */
+@font-face {
+    font-family: 'SeoulHangangM';
+    src: url('fonts/SeoulHangangM.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* 서울남산체 */
+@font-face {
+    font-family: 'SeoulNamsanM';
+    src: url('fonts/SeoulNamsanM.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+
+/* Cafe24Simplehae */
+@font-face {
+    font-family: 'Cafe24Simplehae';
+    src: url('fonts/Cafe24Simplehae.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* Cafe24Oh 카페24 아네모네/카페24 아네모네 에어 */
+@font-face {
+    font-family: 'Cafe24Oh';
+    src: url('fonts/Cafe24Ohsquare.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Cafe24Oh';
+    src: url('fonts/Cafe24Ohsquareair.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}

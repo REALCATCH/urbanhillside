@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="60" viewBox="0 0 400 60" role="img" aria-label="Hillside Urban City">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0a223e"/>
+      <stop offset="100%" stop-color="#c17426"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="400" height="60" rx="6" ry="6" fill="white"/>
+  <text x="200" y="38" text-anchor="middle" font-family="'Pretendard', 'GmarketSans', Arial, sans-serif" font-size="24" font-weight="700" fill="url(#g)">
+    HILLSIDE URBAN CITY
+  </text>
+</svg>
