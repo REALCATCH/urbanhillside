@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redirecting...</title>
+  <meta http-equiv="refresh" content="0;url=/" />
+  <script>
+    (function () {
+      try {
+        var params = new URLSearchParams(window.location.search);
+        var m = params.get('m');
+        if (m) {
+          // Normalize leading slashes
+          if (m.charAt(0) !== '/') m = '/' + m;
+          window.location.replace(m);
+        } else {
+          window.location.replace('/');
+        }
+      } catch (e) {
+        window.location.replace('/');
+      }
+    })();
+  </script>
+  <noscript>
+    <meta http-equiv="refresh" content="0;url=/" />
+  </noscript>
+</head>
+<body>
+  Redirecting...
+</body>
+</html>
