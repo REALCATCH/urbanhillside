@@ -6,6 +6,10 @@
     { "source": "/", "destination": "/mirror_desktop/hillsideurbancity.bunyangnara.kr/index.html" }
   ],
   "rewrites": [
-    { "source": "/(.*)", "destination": "/mirror_desktop/hillsideurbancity.bunyangnara.kr/$1" }
+    { "source": "/mirror_desktop/hillsideurbancity.bunyangnara.kr/(.*)", "destination": "/mirror_desktop/hillsideurbancity.bunyangnara.kr/$1" },
+    { "source": "/home_page/(.*)", "destination": "/mirror_desktop/hillsideurbancity.bunyangnara.kr/home_page/$1" },
+    { "source": "/admin/(.*)", "destination": "/mirror_desktop/hillsideurbancity.bunyangnara.kr/admin/$1" },
+    { "source": "/sub.html(.*)", "destination": "/mirror_desktop/hillsideurbancity.bunyangnara.kr/sub.html$1" },
+    { "source": "/index.html", "destination": "/mirror_desktop/hillsideurbancity.bunyangnara.kr/index.html" }
   ]
 }
