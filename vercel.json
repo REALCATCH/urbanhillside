@@ -2,6 +2,28 @@
   "version": 2,
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    { "source": "/sub.html%3Fm=life1.html", "destination": "/life1.html" },
+    { "source": "/sub.html%3Fm=life2.html", "destination": "/life2.html" },
+    { "source": "/sub.html%3Fm=life4.html", "destination": "/life4.html" },
+    { "source": "/sub.html%3Fm=premium2.html", "destination": "/premium2.html" },
+    { "source": "/sub.html%3Fm=premium3.html", "destination": "/premium3.html" },
+    { "source": "/sub.html%3Fm=unit1.html", "destination": "/unit1.html" },
+    { "source": "/sub.html%3Fm=K1755677414426.html", "destination": "/K1755677414426.html" },
+    { "source": "/sub.html%3Fm=K1756966807379.html", "destination": "/K1756966807379.html" },
+    { "source": "/sub.html%3Fm=J1755677484258.html", "destination": "/J1755677484258.html" },
+    { "source": "/sub.html%3Fm=customer1.html", "destination": "/customer1.html" },
+    { "source": "/sub.html", "has": [{ "type": "query", "key": "m", "value": "life1.html" }], "destination": "/life1.html" },
+    { "source": "/sub.html", "has": [{ "type": "query", "key": "m", "value": "life2.html" }], "destination": "/life2.html" },
+    { "source": "/sub.html", "has": [{ "type": "query", "key": "m", "value": "life4.html" }], "destination": "/life4.html" },
+    { "source": "/sub.html", "has": [{ "type": "query", "key": "m", "value": "premium2.html" }], "destination": "/premium2.html" },
+    { "source": "/sub.html", "has": [{ "type": "query", "key": "m", "value": "premium3.html" }], "destination": "/premium3.html" },
+    { "source": "/sub.html", "has": [{ "type": "query", "key": "m", "value": "unit1.html" }], "destination": "/unit1.html" },
+    { "source": "/sub.html", "has": [{ "type": "query", "key": "m", "value": "K1755677414426.html" }], "destination": "/K1755677414426.html" },
+    { "source": "/sub.html", "has": [{ "type": "query", "key": "m", "value": "K1756966807379.html" }], "destination": "/K1756966807379.html" },
+    { "source": "/sub.html", "has": [{ "type": "query", "key": "m", "value": "J1755677484258.html" }], "destination": "/J1755677484258.html" },
+    { "source": "/sub.html", "has": [{ "type": "query", "key": "m", "value": "customer1.html" }], "destination": "/customer1.html" }
+  ],
   "rewrites": [
     { "source": "/sub.html%3Fm=(.*)", "destination": "/$1" },
     { "source": "/sub.html", "has": [{ "type": "query", "key": "m", "value": "(.*)" }], "destination": "/$1" }
