@@ -402,9 +402,26 @@ $(document).ready(function(){
 	});
 	//
 
-
-
-
-
-//
+	// normalize legacy encoded subpage links to clean filenames
+	(function normalizeSubpageLinks(){
+		$('a[href]').each(function(){
+			var href = $(this).attr('href');
+			if(!href) return;
+			if (/^(https?:|mailto:|tel:|javascript:|#)/i.test(href)) return;
+			var newHref = href;
+			// encoded style: sub.html%3Fm=life1.html
+			newHref = newHref.replace(/(^|\/)sub\.html%3Fm=/, '$1');
+			// query style: sub.html?m=life1.html
+			var q = newHref.match(/(^|\/)sub\.html\?m=([^#]+)/);
+			if (q) {
+				newHref = (q[1] || '') + q[2];
+			}
+			// trim leading './'
+			newHref = newHref.replace(/^\.\//, '');
+			if (newHref !== href) {
+				$(this).attr('href', newHref);
+			}
+		});
+	})();
+	//
 });
